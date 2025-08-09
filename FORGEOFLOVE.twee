@@ -7,652 +7,1942 @@ FORGEOFLOVE
   "ifid": "A7E7DE49-AB5B-47C6-8A36-DE03F39C6BB5",
   "format": "SugarCube",
   "format-version": "2.37.3",
-  "start": "Untitled Passage",
+  "start": "Start",
   "tag-colors": {
     "Eregion": "green",
     "OuterForge": "yellow",
     "InnerForge": "orange",
     "Wall": "blue",
-    "EveWall": "purple"
+    "EveWall": "purple",
+    "cel": "",
+    "Fin": "purple"
   },
   "zoom": 1
 }
 
 
 :: Eregion1 [Eregion] {"position":"1675,500","size":"100,100"}
-Мирдания: Солнце еще так высоко, но работа в кузнице уже меня утомила. Позволю глазам отдохнуть немного, созерцая прекрасные виды нашего города… 
+<<nobr>>
 
-[[Далее|Eregion2]]
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to " Солнце еще так высоко, но работа в кузнице уже меня утомила. Позволю глазам отдохнуть немного, созерцая прекрасные виды нашего города…">>
+<<set _reply1 to "Далее">>
+<<case "en">>
+<<set _npcReply to "The sun is still high in the sky, but I am already tired from working in the forge. I shall give my eyes some rest and enjoy the splendid view of our city.">>
+<<set _reply1 to "Proceed">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Eregion2]]</div>
+<</nobr>>
 
 
 :: Eregion10 [Eregion igor] {"position":"1825,875","size":"100,100"}
-Малендол: Что ж, не смею задерживать тебя, прекрасная Мирдания. Наверняка без тебя работа в кузнице владыки Келебримбора просто остановится.
+<<nobr>>
 
-Мирдания: 
-[[- Мне и правда пора вернуться к работе. До скорой встречи, Малендол!|Forge5][$igorAffection = $igorAffection+10]]
-[[- Да, мне нужно идти в кузницу. Хорошо, что мимо такого стражника точно не проскочит никакой С… А, неважно.|Forge5]]
+<<set _npcPic to "IgorA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Что ж, не смею задерживать тебя, прекрасная Мирдания. Наверняка без тебя работа в кузнице владыки Келебримбора просто остановится.">>
+<<set _reply1 to "Мне и правда пора вернуться к работе. До скорой встречи, Малендол!">>
+<<set _reply2 to "Да, мне нужно идти в кузницу. Хорошо, что мимо такого стражника точно не проскочит никакой С… А, неважно.">>
+<<case "en">>
+<<set _npcReply to "Well, fair Mirdania, I shall not detain you any further. Certainly, there won’t be any work done in Lord Celebrimbor’s forge without you.">>
+<<set _reply1 to "I really need to get back to my work. See you soon, Malendol!">>
+<<set _reply2 to "Yes, I need to go to the forge. It’s good to know that with a guard like this there is no chance Sau… well, nevermind.">>
+<</switch>>
 
-
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/>
+<p>1. [[_reply1|Forge5][$igorAffection = $igorAffection+10]]</p>
+<p>2. [[_reply2|Forge5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion2 [Eregion galya] {"position":"1675,625","size":"100,100"}
-Галя: О, прекрасная эрегионская дева! Позволь обратиться к тебе, раз воля Валар нас здесь свела.
+<<nobr>>
 
-Мирдания: 
-[[- Ах, пресвятой Илуватар! Что за день, все появляются передо мной так резко!|Eregion3]]
-[[- Мои глаза меня не обманывают? Леди Галадриэль!|Eregion3][$galAffection = $galAffection + 10]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, прекрасная эрегионская дева! Позволь обратиться к тебе, раз воля Валар нас здесь свела.">>
+<<set _reply1 to "Ах, пресвятой Илуватар! Что за день, все появляются передо мной так резко!">>
+<<set _reply2 to "Мои глаза меня не обманывают? Леди Галадриэль!">>
+<<case "en">>
+<<set _npcReply to "Fair maiden of Eregion! Let me speak to you, as the will of the Valar brought us together.">>
+<<set _reply1 to "Oh Holy Ilúvatar! Why does everyone appear so suddenly before me today!">>
+<<set _reply2 to "Are my eyes deceiving me? Lady Galadriel!">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/>
+<p>1. [[_reply1|Eregion3]]</p>
+<p>2. [[_reply2|Eregion3][$galAffection = $galAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion3 [Eregion galya] {"position":"1675,750","size":"100,100"}
-Галя: Это я, леди Галадриэль, но прошу тебя, не повышай голос! Я нахожусь здесь тайно! Приехала из самого Линдона, потому что у меня еть страшная догадка… В славном королевстве Эрегион скрывается сам Саурон!
+<<nobr>>
 
-Мирдания: 
-[[- Моя леди, вы снова пытаетесь меня напугать?|Eregion4]]
-[[- Леди Галадриэль, не стоит произносить в Эрегионе такие страшные слова!|Eregion4][$galAffection = $galAffection + 10]]
+<<set _npcPic to "GAL0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Это я, леди Галадриэль, но прошу тебя, не повышай голос! Я нахожусь здесь тайно! Приехала из самого Линдона, потому что у меня еcть страшная догадка… В славном королевстве Эрегион скрывается сам Саурон!">>
+<<set _reply1 to "Моя леди, вы снова пытаетесь меня напугать?">>
+<<set _reply2 to "Леди Галадриэль, не стоит произносить в Эрегионе такие страшные слова!">>
+<<case "en">>
+<<set _npcReply to "It is me, but please, keep your voice down. I have come here in secret. I came all the way from Lindon for I have a disturbing suspicion. None other than Sauron is hiding here, in the glorious kingdom of Eregion!">>
+<<set _reply1 to "Are you trying to frighten me again, my Lady?">>
+<<set _reply2 to "Lady Galadriel, you should not utter such horrifying words in Eregion!">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply">
+    <img src="MIRPIC.png"/>
+    <p>1. [[_reply1|Eregion4]]</p>
+    <p>2. [[_reply2|Eregion4][$galAffection = $galAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion4 [Eregion galya] {"position":"1675,875","size":"100,100"}
-Галя: Как бы мне ни хотелось, чтобы это было лишь неуместной шуткой - но нет… У меня есть сведения, согласно которым Саурон скрывается под добродетельной личиной - и направился он именно сюда, в Эрегион.
+<<nobr>>
 
-Мирдания: 
-[[- Леди Галадриэль, но ведь это даже звучит невероятно! Уж появление Саурона мы бы заметили!|Eregion5]]
-[[- Моя леди, о таком страшно даже подумать! Саурон в самом прогрессивном эльфийском королевстве?|Eregion5][$galAffection = $galAffection + 10]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Как бы мне ни хотелось, чтобы это было лишь неуместной шуткой - но нет… У меня есть сведения, согласно которым Саурон скрывается под добродетельной личиной - и направился он именно сюда, в Эрегион.">>
+<<set _reply1 to "Леди Галадриэль, но ведь это даже звучит невероятно! Уж появление Саурона мы бы заметили!">>
+<<set _reply2 to "Моя леди, о таком страшно даже подумать! Саурон в самом прогрессивном эльфийском королевстве?">>
+<<case "en">>
+<<set _npcReply to "I wish it were simply an inappropriate joke, however, it is not one. According to the information that I have, Sauron is disguised as a righteous man and he was heading right here, to Eregion.">>
+<<set _reply1 to "Lady Galadriel, this sounds too unbelievable! Surely we would have noticed the arrival of Sauron himself!">>
+<<set _reply2 to "My Lady, I dread to even think of this! Sauron is here, in the most advanced Elven kingdom of all!">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply">
+    <img src="MIRPIC.png"/>
+    <p>1. [[_reply1|Eregion5]]</p>
+    <p>2. [[_reply2|Eregion5][$galAffection = $galAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion5 [Eregion galya] {"position":"1675,1000","size":"100,100"}
-Галя: Подумай, прекрасная дева, не появлялся ли в последнее время в эрегионе некто… необычный? Чужестранец, который на первый взгляд вовсе не вызывает подозрений? 
+<<nobr>>
 
-Мирдания: 
-[[- Леди Галадриэль, мы в Эрегионе весьма осмотрительны и никогда бы не пропустили ничего, что имеет отношение к силам тьмы!|Eregion6]]
-[[- Моя леди, Эрегион - большое королевство. Чтобы сказать наверняка, нужно сначала понаблюдать…|Eregion6][$galAffection = $galAffection+5]]
+<<set _npcPic to "GAL0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Подумай, прекрасная дева, не появлялся ли в последнее время в Эрегионе некто… необычный? Чужестранец, который на первый взгляд вовсе не вызывает подозрений?">>
+<<set _reply1 to "Леди Галадриэль, мы в Эрегионе весьма осмотрительны и никогда бы не пропустили ничего, что имеет отношение к силам тьмы!">>
+<<set _reply2 to "Моя леди, Эрегион - большое королевство. Чтобы сказать наверняка, нужно сначала понаблюдать…">>
+<<case "en">>
+<<set _npcReply to "Try to recall, fair maiden, whether someone strange has come to Eregion lately. Perhaps, a foreigner who arouses no suspicion at first glance?">>
+<<set _reply1 to "Lady Galadriel, we all here are very cautious. We would never miss anything that has to do with the Enemy!">>
+<<set _reply2 to "My Lady, Eregion is a vast kingdom. One has to observe it closely before they can tell anything for certain.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply">
+    <img src="MIRPIC.png"/>
+    <p>1. [[_reply1|Eregion6]]</p>
+    <p>2. [[_reply2|Eregion6][$galAffection = $galAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion6 [Eregion galya] {"position":"1675,1125","size":"100,100"}
-Галя: Я должна ненадолго скрыться, чтобы мое появление здесь осталось тайным - ведь у Саурона везде глаза… Будь начеку, Эрегионская дева!
+<<nobr>>
 
-Мирдания: 
-[[-Уверяю вас, моя леди, ваши подозрения напрасны.|Eregion7]]
-[[- Хорошо, леди Галадриэль, я присмотрюсь к обитателям нашего королевства.|Eregion7][$galAffection = $galAffection + 15]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Я должна ненадолго скрыться, чтобы мое появление здесь осталось тайным - ведь у Саурона везде глаза… Будь начеку, Эрегионская дева!">>
+<<set _reply1 to "Уверяю вас, моя леди, ваши подозрения напрасны.">>
+<<set _reply2 to "Хорошо, леди Галадриэль, я присмотрюсь к обитателям нашего королевства.">>
+<<case "en">>
+<<set _npcReply to "Sauron has eyes everywhere, so I have to hide for a while to keep my arrival secret. Keep your eyes open, fair maiden of Eregion!">>
+<<set _reply1 to "Rest assured, my Lady, your suspicion is not true.">>
+<<set _reply2 to "As you wish, Lady Galadriel, I shall take a closer look at the inhabitants of our kingdom.">>
+<</switch>>
 
-
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Eregion7]]</p>
+<p>2. [[_reply2|Eregion7][$galAffection = $galAffection + 15]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion7 [Eregion] {"position":"1825,500","size":"100,100"}
-Мирдания: Ну и дела…
-[[Перевести дух|Eregion8]]
+<<nobr>>
 
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ну и дела…">>
+<<set _reply1 to "Перевести дух">>
+<<case "en">>
+<<set _npcReply to "Good Valar!">>
+<<set _reply1 to "Go for a breath of air">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Eregion8]]</div>
+<</nobr>>
 
 
 :: Eregion8 [Eregion igor] {"position":"1825,625","size":"100,100"}
-Малендол: Мирдания! Как я рад видеть тебя, этот прекрасный день в Эрегионе стал еще прекраснее!
+<<nobr>>
 
-Мирдания: 
-[[- Здравствуй, Малендол. Рада видеть тебя.|Eregion9][$igorAffection = $igorAffection+15]]
-[[- А, наш величайший страж. Вот уж точно, мимо такого никакое зло в Эрегион не проскочит…|Eregion9]]
+<<set _npcPic to "IgorA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания! Как я рад видеть тебя, этот прекрасный день в Эрегионе стал еще прекраснее!">>
+<<set _reply1 to "Здравствуй, Малендол. Рада видеть тебя.">>
+<<set _reply2 to "А, наш величайший страж. Вот уж точно, мимо такого никакое зло в Эрегион не проскочит…">>
+<<case "en">>
+<<set _npcReply to "Mirdania! It is a pleasure to see you. Now this beautiful day has become even more beautiful.">>
+<<set _reply1 to "Greetings, Malendol. It is nice to see you.">>
+<<set _reply2 to "And here he is, our greatest guard. Surely, no evil would pass him by unnoticed.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Eregion9][$igorAffection = $igorAffection+15]]</p>
+<p>2. [[_reply2|Eregion9]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Eregion9 [Eregion igor] {"position":"1825,750","size":"100,100"}
-Малендол: Твоя красота не знает себе равных, прекрасная Мирдания, каждая наша встреча радует мое сердце. Но я также не умаляю и твоих заслуг в кузнечном деле! Ни в коем случае!
+<<nobr>>
 
-Мирдания: 
-[[Ах, благодарю тебя, Малендол! Слышать такое от тебя очень приятно|Eregion10][$igorAffection = $igorAffection+15]]
-[[- Спасибо! Кстати говоря, пора бы мне пойти и заняться этим кузнечным делом.|Eregion10]]
+<<set _npcPic to "IgorB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Твоя красота не знает себе равных, прекрасная Мирдания, каждая наша встреча радует мое сердце. Но я также не умаляю и твоих заслуг в кузнечном деле! Ни в коем случае!">>
+<<set _reply1 to "Ах, благодарю тебя, Малендол! Слышать такое от тебя очень приятно.">>
+<<set _reply2 to "Спасибо! Кстати говоря, пора бы мне пойти и заняться этим кузнечным делом.">>
+<<case "en">>
+<<set _npcReply to "Your beauty is unparalled, oh, fair Mirdania! Every meeting of ours makes my heart sing. But of course, I do not diminish the merit of your blacksmith’s work, I would never!">>
+<<set _reply1 to "Thank you, Malendol! It is very pleasant to hear such words from you.">>
+<<set _reply2 to "Thank you! By the way, it’s high time I did that very blacksmithing.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/>
+<p>1. [[_reply1|Eregion10][$igorAffection = $igorAffection+15]]</p>
+<p>2. [[_reply2|Eregion10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: EveWall1 [Wall] {"position":"2650,500","size":"100,100"}
+<<nobr>>
 
-:: EveWall1 [EveWall] {"position":"2650,500","size":"100,100"}
-Мирдания: Что за день… Но его закат все равно так прекрасен…
-[[Полюбоваться немного|EveWall2]]
+<<set _npcPic to "MIRB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Что за день… Но его закат все равно так прекрасен…">>
+<<set _reply1 to "Полюбоваться немного">>
+<<case "en">>
+<<set _npcReply to "What a day… but despite everything, the sunset is so beautiful today.">>
+<<set _reply1 to "Admire the view">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|EveWall2]]</div>
+<</nobr>>
 
 
 :: EveWall2 [EveWall galya] {"position":"2650,625","size":"100,100"}
-Галя: Прекрасная дева-подмастерье - Мирдания, верно? Ну что, ты присмотрелась внимательнее к обитателям этого славного королевства?
+<<nobr>>
 
-Мирдания: 
-[[- О, леди Галадриэль! Вообще-то, мастер Келебримбор упоминал немного странные вещи…|EveWall3]]
-[[- Знаете, госпожа, если начать присматриваться к эрегионцам, странными кажутся все!|EveWall3][$galAffection = $galAffection+5]]
+<<set _npcPic to "GALB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Прекрасная дева-подмастерье - Мирдания, верно? Ну что, ты присмотрелась внимательнее к обитателям этого славного королевства?">>
+<<set _reply1 to "О, леди Галадриэль! Вообще-то, мастер Келебримбор упоминал немного странные вещи…">>
+<<set _reply2 to "Знаете, госпожа, если начать присматриваться к эрегионцам, странными кажутся все!">>
+<<case "en">>
+<<set _npcReply to "Good evening, fair maiden. Mirdania, as I recall. So, did you have a closer look at the inhabitants of this glorious kingdom?">>
+<<set _reply1 to "Lady Galadriel! In fact, Master Celebrimbor mentioned some weird facts.">>
+<<set _reply2 to "You know, my Lady, once you start looking closer, they all seem weird!">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall3]]</p>
+<p>2. [[_reply2|EveWall3][$galAffection = $galAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall3 [EveWall galya] {"position":"2650,750","size":"100,100"}
-Галя: Ну, Мирдания, не стоит совсем уж впадать в подозрительность… Но и слепо верить другим тоже опасно. Я и сама была обманута…
+<<nobr>>
 
-Мирдания: 
-[[- Я буду предельно осторожна!|EveWall4]]
-[[- Должна признаться, леди Галадриэль, у меня есть подозрения насчет одного местного обитателя… Точнее, как раз, неместного…|EveWall4AnnatarSus][$galAffection = $galAffection+15]]
+<<set _npcPic to "GAL0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ну, Мирдания, не стоит совсем уж впадать в подозрительность… Но и слепо верить другим тоже опасно. Я и сама была обманута…
+">>
+<<set _reply1 to "Я буду предельно осторожна!">>
+<<set _reply2 to "Должна признаться, леди Галадриэль, у меня есть подозрения насчет одного местного обитателя… Точнее, как раз, неместного…">>
+<<case "en">>
+<<set _npcReply to "Please, Mirdania, do not be so apprehensive of everyone. And yet, it is dangerous to trust everyone as well. You know, I was deceived once too…">>
+<<set _reply1 to "I will be very cautious!">>
+<<set _reply2 to "I have to admit, Lady Galadriel, I am suspicious of a local inhabitant. Well, in fact, he is not local.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall4]]</p>
+<p>2. [[_reply2|EveWall4AnnatarSus][$galAffection = $galAffection+15]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall4 [EveWall galya] {"position":"2775,875","size":"100,100"}
-Галя: Мирдания, ты станешь моими глазами в Эрегионе! Следи внимательно за всеми!
+<<nobr>>
 
-Мирдания: 
-[[- Хорошо, госпожа! Вместе мы противостоим любому злу!|Forge11]]
-[[- Не сомневайтесь, леди, я смогу вычислить угрозу!|Forge11]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания, ты станешь моими глазами в Эрегионе! Следи внимательно за всеми!">>
+<<set _reply1 to "Хорошо, госпожа! Вместе мы противостоим любому злу!">>
+<<set _reply2 to "Не сомневайтесь, леди, я смогу вычислить угрозу!">>
+<<case "en">>
+<<set _npcReply to "Mirdania, you will be my eyes in Eregion. Keep watching everyone very closely!">>
+<<set _reply1 to "Gladly, my Lady. Together we will oppose all the evil!">>
+<<set _reply2 to "Rest assured, my Lady, I will identify the threat!">>
+<</switch>>
 
-
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge11]]</p>
+<p>2. [[_reply2|Forge11]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall4AnnatarSus [EveWall galya] {"position":"2650,875","size":"100,100"}
-Галя: Кто он? Полагаю, имя не имеет значения, у него и в лучшие времена их было полно… Скажи лучше, как он выглядит!
+<<nobr>>
 
-Мирдания: 
-[[- Высокий, статный… Сильный…|EveWall4AnnatarSus2]]
-[[- Ну, он… Красивый.|EveWall4AnnatarSus2]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Кто он? Полагаю, имя не имеет значения, у него и в лучшие времена их было полно… Скажи лучше, как он выглядит!
+">>
+<<set _reply1 to "Высокий, статный… Сильный…">>
+<<set _reply2 to "Ну, он… Красивый.">>
+<<case "en">>
+<<set _npcReply to "Who is he? The name bears little significance as even at the best of times he had many. Tell me of his looks!">>
+<<set _reply1 to "He is tall, stately... and strong…">>
+<<set _reply2 to "Well, he is… handsome.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall4AnnatarSus2]]</p>
+<p>2. [[_reply2|EveWall4AnnatarSus2]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall4AnnatarSus2 [EveWall galya] {"position":"2650,1000","size":"100,100"}
-Галя: Звучит так, будто это он! Мирдания, непременно следи за ним очень внимательно!
+<<nobr>>
 
-Мирдания: 
-[[- Хорошо, леди Галадриэль, только пожалуйста, не устраивайте с ним битв в Эрегионе. Это приведет к беспорядкам.|Forge11]]
-[[- Разумеется, леди! Безопасность превыше всего!|Forge11][$galAffection = $galAffection+5]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Звучит так, будто это он! Мирдания, непременно следи за ним очень внимательно!">>
+<<set _reply1 to "Хорошо, леди Галадриэль, только пожалуйста, не устраивайте с ним битв в Эрегионе. Это приведет к беспорядкам.">>
+<<set _reply2 to "Разумеется, леди! Безопасность превыше всего!">>
+<<case "en">>
+<<set _npcReply to "That sounds like him! Mirdania, you must keep an eye on him very closely!">>
+<<set _reply1 to "I will, Lady Galadriel, but please, do not start any fights with him in Eregion. This can lead to turmoil.">>
+<<set _reply2 to "Gladly, my Lady. Safety above all else.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge11]]</p>
+<p>2. [[_reply2|Forge11][$galAffection = $galAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5Galya1 [EveWall galya] {"position":"3425,500","size":"100,100"}
-Мирдания: Нужно найти леди Галадриэль!
+<<nobr>>
 
-[[Отправиться за леди Галадриэль|EveWall5Galya2]]
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Нужно найти леди Галадриэль!">>
+<<set _reply1 to "Отправиться за леди Галадриэль">>
+<<case "en">>
+<<set _npcReply to "I have to find Lady Galadriel!">>
+<<set _reply1 to "Go after Lady Galadriel">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|EveWall5Galya2]]</div>
+<</nobr>>
 
 
 :: EveWall5Galya2 [EveWall galya] {"position":"3425,625","size":"100,100"}
-Галя: Мирдания! Ну что, убедилась, что я была права?
+<<nobr>>
 
-Мирдания: 
-[[- Да, моя леди! Кто бы мог подумать, что прекрасный посланник Валар окажется самим слугой зла!|EveWall5GalyaFin]]
-[[- Леди Галадриэль, я не сомневаюсь в вашей мудрости, но мне так трудно поверить, что глашатай воли Валар, такой умелый кузнец все это время обманывал меня…|EveWall5Galya3][$galAffection = $galAffection + 10]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания! Ну что, убедилась, что я была права?">>
+<<set _reply1 to "Да, моя леди! Кто бы мог подумать, что прекрасный посланник Валар окажется самим слугой зла!">>
+<<set _reply2 to "Леди Галадриэль, я не сомневаюсь в вашей мудрости, но мне так трудно поверить, что глашатай воли Валар, такой умелый кузнец все это время обманывал меня…">>
+<<case "en">>
+<<set _npcReply to "Mirdania! Have you realized that I was right?">>
+<<set _reply1 to "Yes, my Lady! Who would have thought that a handsome emissary of the Valar would turn out to be a servant of Evil!">>
+<<set _reply2 to "Lady Galadriel, I am not questioning your wisdom, but it is hard for me to believe that the herald of the Valar and such a skillful blacksmith has been deceiving me all this time.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5GalyaFin]]</p>
+<p>2. [[_reply2|EveWall5Galya3][$galAffection = $galAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5Galya3 [EveWall galya] {"position":"3425,750","size":"100,100"}
-Галя: Прошу, Мирдания, поверь мне! Это он! Он умеет показывать лишь то, что ты желаешь, чтобы ты не замечала зла, что он творит!
+<<nobr>>
 
-Мирдания:
-[[- Леди Галадриэль… Если он сумел провести даже вас, то как бы я сумела распознать его? Что же мне делать, я ни за что теперь не вернусь в кузницу!|EveWall5GalyaFin]]
-[[- Моя леди, если это правда, то нам нужны доказательства! Я вернусь в кузницу и попробую все выяснить!|InnerForge11][$galAffection = $galAffection + 5]]
+<<set _npcPic to "GALA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Прошу, Мирдания, поверь мне! Это он! Он умеет показывать лишь то, что ты желаешь, чтобы ты не замечала зла, что он творит!">>
+<<set _reply1 to "Леди Галадриэль… Если он сумел провести даже вас, то как бы я сумела распознать его? Что же мне делать, я ни за что теперь не вернусь в кузницу!">>
+<<set _reply2 to "Моя леди, если это правда, то нам нужны доказательства! Я вернусь в кузницу и попробую все выяснить!">>
+<<case "en">>
+<<set _npcReply to "Please, Mirdania, believe me! It is him! He can show you only the things you wish for and conceal his evil deeds from you!">>
+<<set _reply1 to "Lady Galadriel, if he managed to deceive even you, how could I alone recognise him? What should I do now? I shall never return to the forge!">>
+<<set _reply2 to "My lady, if it is true, we need proof! I shall return to the forge and try to find out everything!">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5GalyaFin]]</p>
+<p>2. [[_reply2|InnerForge11][$galAffection = $galAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5GalyaFin [EveWall galya] {"position":"3550,750","size":"100,100"}
-Галя: Прекрасная Мирдания, наконец твои глаза открылись и ты видишь ими зло, что сотворил этот слуга тьмы! Мы обе были обмануты - но более этого не допустим! Идем со мной в мое королевство Лотлориэн, оставим здесь этих токсичных мужиков и дальше считать кубики на своих прессах! Идем же, в моем королевстве тебя ждет лишь радость, спокойствие и свет, которых ты достойна!
+<<nobr>>
 
-[[Fin|Fin]]
+<<set _npcPic to "GALB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Прекрасная Мирдания, наконец твои глаза открылись и ты видишь ими зло, что сотворил этот слуга тьмы! Мы обе были обмануты - но более этого не допустим! Идем со мной в мое королевство Лотлориэн, оставим здесь этих токсичных мужиков и дальше считать кубики на своих прессах! Идем же, в моем королевстве тебя ждет лишь радость, спокойствие и свет, которых ты достойна!">>
+<<case "en">>
+<<set _npcReply to "Fair Mirdania, your eyes have finally opened and now you can observe all the evil deeds of this servant of darkness. We both have been deceived but this will never happen again! Come with me to my kingdom of Lothlórien, let’s leave these toxic men count their abdominals as long as they want. Come! I promise that only joy, peace and light await you there, and you are worthy of such a blissful life.
+">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><p>[[Fin|Fin][$winner = "gal"]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5Igor1 [EveWall] {"position":"3175,500","size":"100,100"}
-Мирдания: Нужно найти капитана стражи!
-[[Отправиться за Малендолом|EveWall5Igor2]]
+<<nobr>>
 
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Нужно найти капитана стражи!">>
+<<set _reply1 to "Отправиться за Малендолом">>
+<<case "en">>
+<<set _npcReply to "I have to find the captain of the Guard!">>
+<<set _reply1 to "Go after Malendol">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|EveWall5Igor2]]</div>
+<</nobr>>
 
 
 :: EveWall5Igor2 [EveWall igor] {"position":"3175,625","size":"100,100"}
-Малендол: Мирдания! Что-то случилось?
+<<nobr>>
 
-Мирдания: 
-[[- Малендол, меня истерзали подозрения, я не могу более держать их в себе! Ходят слухи, что в Эрегионе находится сам Саурон! И мне кажется… Это посланник Валар Аннатар!|EveWall5Igor3]]
-[[- Ах, Малендол, я просто не могу здесь больше находиться! Все королевство погрязло в тайнах и интригах! Говорят, среди нас скрывается сам Саурон, но как узнать его? Ведь даже ты появился здесь так внезапно…|EveWall5IgorFin]]
+<<set _npcPic to "IgorA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания! Что-то случилось?">>
+<<set _reply1 to "Малендол, меня истерзали подозрения, я не могу более держать их в себе! Ходят слухи, что в Эрегионе находится сам Саурон! И мне кажется… Это посланник Валар Аннатар!">>
+<<set _reply2 to "Ах, Малендол, я просто не могу здесь больше находиться! Все королевство погрязло в тайнах и интригах! Говорят, среди нас скрывается сам Саурон, но как узнать его? Ведь даже ты появился здесь так внезапно…">>
+<<case "en">>
+<<set _npcReply to "Mirdania! What happened?">>
+<<set _reply1 to "Malendol, many suspicions have been gnawing at me, and I can no longer keep them inside! There is a rumour that none other than Sauron is in Eregion! And I think he is… the emissary of the Valar, Annatar!">>
+<<set _reply2 to "Malendol, I cannot stand being here any longer! The kingdom has been mired in secrets and intrigues! Sauron is said to hide among us, but how can I recognise him? After all, even you appeared here so suddenly…">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5Igor3]]</p>
+<p>2. [[_reply2|EveWall5IgorFin]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5Igor3 [EveWall igor] {"position":"3175,750","size":"100,100"}
-Малендол: Это очень серьезное обвинение, Мирдания! Что же ты намерена делать?
+<<nobr>>
 
-Мирдания: 
-[[- Я не желаю возвращаться в кузницу! Владыка Келебримбор не откровенен с нами и теперь я чувствую угрозу! Я устала от этих недомолвок и секретов!|EveWall5IgorFin]]
-[[- А что мне еще остается? Вернусь в кузницу и присмотрю з ним. Но и ты не теряй бдительности!|InnerForge11]]
+<<set _npcPic to "IgorA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Это очень серьезное обвинение, Мирдания! Что же ты намерена делать?">>
+<<set _reply1 to "Я не желаю возвращаться в кузницу! Владыка Келебримбор не откровенен с нами и теперь я чувствую угрозу! Я устала от этих недомолвок и секретов!">>
+<<set _reply2 to "А что мне еще остается? Вернусь в кузницу и присмотрю з ним. Но и ты не теряй бдительности!">>
+<<case "en">>
+<<set _npcReply to "This is a very serious accusation, Mirdania. So what are you planning to do?">>
+<<set _reply1 to "I do not wish to return to the forge! Lord Celebrimbor is not entirely honest with us and now I feel threatened! I am tired of all this secrecy!">>
+<<set _reply2 to "What else can I do? I shall return to the forge and keep an eye on him. And you should be alert as well!">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5IgorFin]]</p>
+<p>2. [[_reply2|InnerForge11]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: EveWall5IgorFin [EveWall igor] {"position":"3300,750","size":"100,100"}
-Малендол: Ты права, Мирдания! Никаких больше тайн! Я должен открыться тебе…
+<<nobr>>
+
+<<set _npcPic to "Igor0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ты права, Мирдания! Никаких больше тайн! Я должен открыться тебе…
 Дело в том, что я не из этого мира! На самом деле я из города Магнитогорск в Российской Федерации - страны из седьмой эпохи. Я работал охранником в магазине “Магнит”, потому-то и стал здесь стражником. Таких, как я, в нашей эпохе называют попаданцами…
 Мирдания! здесь опасно оставаться! Я читал “Властелин колец” и знаю, что Саурон действительно вернется к власти и попытается захватить средиземье! Если бы я читал “Сильмариллион”, то знал бы, что Саурон - это Аннатар, но я же не совсем задрот какой-то.
 Давай сбежим вместе в мой прекрасный мир и будем счастливо жить в моей двушке с мамой! Идем со мной, моя любовь!
+">>
+<<case "en">>
+<<set _npcReply to "You are right, Mirdania. Well, there will be no more secrets. I will reveal myself to you.
+The thing is that I am a man from another world! I was working as a security guard in a supermarket, and that is why I became a guard here too. What has happened to me is sometimes called isekai in my home world.
+Mirdania! It is dangerous to stay here. I have read the Lord of the Rings and I know that Sauron is really going to get his power back and try to conquer Middle-Earth! If I had read Silmarillion as well, I would know that Sauron is Annatar, but I am not some  complete nerd.
+Let’s escape to my beautiful world together and live in my apartment with my mother! Come with me, my love!
+">>
+<</switch>>
 
-[[Fin|Fin]]
-
-
-
-:: Fin {"position":"3575,350","size":"100,100"}
-// проверить концовку Гали
-// проверить концовку Игоря
-// посчитать кто выиграл, Келя, Аннатар или Мирданечка соло
-
-// если выиграл Келя
-КЕК: Ты права, дорогая Мирдания, мне не стоило связываться с подсосом Моргота. Просто он умеет скрасить досуг, а мне было так одиноко… Но мне не нужна здесь лживая блондинка, когда есть натуральная! Мирдания, ты столько раз уже доказала свою верность Эрегиону и кузнечному делу, и в качестве самого достойного претендента на звание своего первого помощника я выбираю тебя! Идем же, обсудим горячие сплавы.
-
-// если выиграл Аннатар
-
-// если выиграл Игорек
-
-// если выиграла Галя
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><p>[[Fin|Fin][$winner = "igor"]]</p>
+</div>
+</div>
+<</nobr>>
 
 
-:: Forge1 [OuterForge Cel] {"position":"1375,500","size":"100,100"}
-[КУЗНИЦА (типа предбанник у Келебримбора, окно, какие-то там разблюренные предметы)]
+:: Fin [Fin] {"position":"3575,350","size":"100,100"}
+<<nobr>>
 
-Келебримбор: О, Мирдания! Как я рад видеть тебя в столь ранний час!
+<<set _epilogue to "The END">>
 
-Мирдания: 
-[[- Владыка Келебримбор! Мне не чужда любовь к труду, которой славился ваш великий отец.|Forge2]]
-[[- Приветствую вас, владыка!|Forge2][$celAffection = $celAffection + 10]]
+<<switch $winner>>
+<<case "igor">>
+<<set _npcPic to "IGOR_fin.png">>
+<<case "cel">>
+<<set _npcPic to "KEK_fin.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _epilogue to "Так, Мирдания осталась с обеспеченным масиком из знатного рода, а Аннатар полностью спалился в том, что он Саурон, который опять сменил личность и нашел новую наковальню. К счастью, Галадриэль подоспела вовремя. чтобы минимизировать ущерб, забрала его и повезла в лес на серьезный разговор. Еще долго ходили слухи о том, каким жестким была эта беседа. Кто-то говорил, что из леса раздавались влажные звуки и стоны, а кто-то даже утверждает, что стонал сам Саурон…">>
+<<case "en">>
+<<set _epilogue to "So Mirdania ended up with a wealthy mature man of a noble family. Annatar was outed as Sauron so he chose a new disguise and found himself another forge. Luckily, Galadriel was just in time to minimize the damage and took him to a forest to have a serious conversation">>
+<</switch>>
+<<case "gal">>
+<<set _npcPic to "GALYA_fin.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _epilogue to "И леди Галадриэль забрала Мирданию с собой в лес, который потом стал ее вотчиной, а Аннатар и Келебримбор мерялись кубиками и обсуждали горячие сплавы, в итоге заказ Гил-Галаду был задержан и эльфийский государь еще заметил на нем какие-то таинственные белые пятна.">>
+<<case "en">>
+<<set _epilogue to "So, Lady Galadriel took Mirdania to the forest, and afterwards, it became her domain. As for Annatar and Celebrimbor, they were competing in showing off their abdominals along with discussing hot alloys. In the end, Gil-galad’s order was delayed and the High King spotted some mysterious white stains on it.">>
+<</switch>>
+<<case "sau">>
+<<set _npcPic to "SAU_fin.png">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_epilogue</p></div>
+</div>
+<</nobr>>
 
 
-:: Forge10 [OuterForge Cel] {"position":"1975,1125","size":"100,100"}
-Келебримбор: Начальник стражи Малендол - настоящий профессионал своего дела. Удивительно, он ведь появился в Эрегионе не так давно буквально из ниоткуда - и так хорошо обо всем осведомлен… Кстати, ты обращала внимание, как он на тебя смотрит, Мирдания? Присмотрись к нему, в жизни ведь есть не только работа, да? Но и работу делать надо, так что не буду тебя отвлекать.
+:: FinForge [InnerForge] {"position":"4000,1225","size":"100,100"}
+<<nobr>>
+<<if $annatarAffection gte $celAffection>>
+<<set _npcPic to "SAUA.png">>
+<<set $winner to "sau">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания, дорогая! Понимаю, я немного подорвал к себе доверие тем, что вынужденно вводил тебя в заблуждение… Дело в том, что я был травмирован подобной ситуацией - стоило мне открыться леди Галадриэль, как ей буквально сорвало колпак! Подумаешь, вечный майя и бывший сотрудник Моргота… Это что, преступление? Вообще-то, ничего не доказано, суда не было! Я - жертва этой ситуации!
+Мирдания, я никогда не встречал женщину, которая так хороша в кузнечном деле! Ты навела меня на мысль, что, возможно, надо заниматься не кольцами власти, а обручальными… ">>
+<<case "en">>
+<<set _npcReply to "My dearest Mirdania! I realize that I must have betrayed your trust by deliberately bewildering you… The thing is that I had been traumatized by a similar situation before. The very moment I opened up to Lady Galadriel she just lost her marbles! So what if I am a Maya and a former Morgoth’s employee? Is it a crime? Technically, there were no court hearings and there is no proof! I am the victim here!
+Mirdania, never have I ever met a woman so skilled in blacksmithing. You got me thinking that, perhaps, I should work on wedding rings rather than the Rings of Power…">>
+<</switch>>
+<<else>>
+<<set _npcPic to "KEKB.png">>
+<<set $winner to "cel">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ты права, дорогая Мирдания, мне не стоило связываться с подсосом Моргота. Просто он умеет скрасить досуг, а мне было так одиноко… Но мне не нужна здесь лживая блондинка, когда есть натуральная! Мирдания, ты столько раз уже доказала свою верность Эрегиону и кузнечному делу, и в качестве самого достойного претендента на звание своего первого помощника я выбираю тебя! Идем же, обсудим горячие сплавы.">>
+<<case "en">>
+<<set _npcReply to "You are right, dear Mirdania, I should not have got involved with Morgoth’s … I was so lonely and he simply helped me brighten up my leisure time. Now that I have a true blonde, I don't longer need a fake one! Mirdania, you have proved your loyalty to Eregion and commitment to blacksmithing so many times. Therefore, I choose you as the most worthy candidate for being my foremost disciple! Let’s go now and discuss some hot alloys.">>
+<</switch>>
+<</if>>
 
-Мирдания: 
-[[- Да, владыка.|InnerForge6]]
-[[- Конечно, владыка.|InnerForge6]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><p>[[Fin|Fin]]</p>
+</div>
+</div>
+<</nobr>>
 
+
+:: Forge1 [OuterForge cel] {"position":"1375,500","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEK0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, Мирдания! Как я рад видеть тебя в столь ранний час!">>
+<<set _reply1 to "Владыка Келебримбор! Мне не чужда любовь к труду, которой славился ваш великий отец.">>
+<<set _reply2 to "Приветствую вас, владыка!">>
+<<case "en">>
+<<set _npcReply to "Mirdania! How pleased I am to see you at this early hour!">>
+<<set _reply1 to "Lord Celebrimbor! I am not alien to the love of work which your father was renowned for.">>
+<<set _reply2 to "Greetings, my lord.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge2]]</p>
+<p>2. [[_reply2|Forge2][$celAffection = $celAffection + 10]]
+</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge10 [OuterForge cel] {"position":"1975,1125","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEK0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Келебримбор: Начальник стражи Малендол - настоящий профессионал своего дела. Удивительно, он ведь появился в Эрегионе не так давно буквально из ниоткуда - и так хорошо обо всем осведомлен… Кстати, ты обращала внимание, как он на тебя смотрит, Мирдания? Присмотрись к нему, в жизни ведь есть не только работа, да? Но и работу делать надо, так что не буду тебя отвлекать.">>
+<<set _reply1 to "Да, владыка.">>
+<<set _reply2 to "Конечно, владыка.">>
+<<case "en">>
+<<set _npcReply to "Malendol, the captain of the Guard, is a true professional. He is surprisingly well-informed about everything, taking into consideration that he appeared in Eregion literally out of nowhere so recently. And speaking of Malendol, have you ever noticed the way he looks at you? Have a closer look at him, Mirdania. There is more to life than mere work, isn’t it? But the work has to be done as well, so I shall not disturb you anymore.">>
+<<set _reply1 to "Yes, my Lord.">>
+<<set _reply2 to "Of course, my Lord.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge6]]</p>
+<p>2. [[_reply2|InnerForge6]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Forge11 [OuterForge] {"position":"2900,500","size":"100,100"}
-Мирдания: Для начала нужно серьезно поговорить с мастером Келебримбором.
-[[Пойти к Келебримбору|Forge12]]
+<<nobr>>
+
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Для начала нужно серьезно поговорить с мастером Келебримбором.">>
+<<set _reply1 to "Пойти к Келебримбору">>
+<<case "en">>
+<<set _npcReply to "I need to have a serious conversation with Lord Celebrimbor first.">>
+<<set _reply1 to "Go to Celebrimbor">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Forge12]]</div>
+<</nobr>>
 
 
 
-:: Forge12 [OuterForge Cel] {"position":"2900,625","size":"100,100"}
-Келебримбор: Двенадцать кубиков… А может, четырнадцать? Но это дважды по семь, не увидят ли в этом скрытый символизм… Да, Мирдания?
+:: Forge12 [OuterForge cel] {"position":"2900,625","size":"100,100"}
+<<nobr>>
 
-Мирдания: 
-[[- Владыка, я должна выразить свое беспокойство касательно одного из обитателей Эрегиона…|Forge13]]
-[[- Мастер Келебримбор, я очень тревожусь за успех наших предприятий, который отчасти кроется в их секретности. Я о том, кто появился в нашем городе недавно…|Forge13][$celAffection = $celAffection + 5]]
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Двенадцать кубиков… А может, четырнадцать? Но это дважды по семь, не увидят ли в этом скрытый символизм… Да, Мирдания?">>
+<<set _reply1 to "Владыка, я должна выразить свое беспокойство касательно одного из обитателей Эрегиона…">>
+<<set _reply2 to "Мастер Келебримбор, я очень тревожусь за успех наших предприятий, который отчасти кроется в их секретности. Я о том, кто появился в нашем городе недавно…">>
+<<case "en">>
+<<set _npcReply to "A twelve-pack… or, perhaps, fourteen? But that makes it twice seven, what if they find some hidden symbolism in it… Yes, Mirdania?
+">>
+<<set _reply1 to "My Lord, I am concerned about one of Eregion’s inhabitants">>
+<<set _reply2 to "Master Celebrimbor, I am worried about the successful outcome of our ventures since it depends on secrecy. I am talking about the one who recently came to our town.">>
+<</switch>>
 
-
-
-:: Forge13 [OuterForge Cel] {"position":"2900,750","size":"100,100"}
-Келебримбор: Ах, да, насчет него. Думаю, я должен был предупредить тебя насчет Аннатара…
-
-Мирдания: 
-[[- Что? Но почему насчет него?|Forge14]]
-[[- А что насчет Аннатара?|Forge14][$annatarAffection = $annatarAffection+5]]
-
-
-:: Forge14 [OuterForge annatar Cel] {"position":"2900,875","size":"100,100"}
-Э ВАЙЛД АННАТАР АППИАРЗ: Да, что насчет Аннатара, владыка?
-
-[[- Ох...|Forge15]]
-
-
-:: Forge15 [OuterForge Cel annatar] {"position":"2900,1000","size":"100,100"}
-Келебримбор: Да ничего, собственно.
-
-Мирдания: 
-[[- Погодите… Появился в Эрегионе недавно… Пришел откуда-то с юга…|Forge16.1]]
-[[- Может, выслушаем самого Аннатара?|Forge16.2][$celAffection = $celAffection + 5]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge13]]</p>
+<p>2. [[_reply2|Forge13][$celAffection = $celAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: Forge13 [OuterForge cel] {"position":"2900,750","size":"100,100"}
+<<nobr>>
 
-:: Forge16.1 [OuterForge annatar Cel] {"position":"2900,1125","size":"100,100"}
-Аннатар: О, я понял, на что ты намекаешь. Но неужели нашего владыку Келебримбора настолько легко одурачить? 
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ах, да, насчет него. Думаю, я должен был предупредить тебя насчет Аннатара…">>
+<<set _reply1 to "Что? Но почему насчет него?">>
+<<set _reply2 to "А что насчет Aннатара?">>
+<<case "en">>
+<<set _npcReply to "Ah, well, about him. I suppose I should have warned you about Annatar…">>
+<<set _reply1 to "What? But why about him?">>
+<<set _reply2 to "What is it about Annatar?">>
+<</switch>>
 
-Мирдания: 
-[[- Нет, конечно нет!|Forge17]]
-[[- Ну, как знать. Саурон ведь умелый мастер обмана…|Forge17][$annatarAffection = $annatarAffection+5]]
-
-
-
-:: Forge16.2 [OuterForge Cel annatar] {"position":"3025,1125","size":"100,100"}
-Аннатар: То есть, когда я говорю, что шестнадцать кубиков пресса - это перебор, то мы Аннатара не слушаем, а теперь… Ну, впрочем, и ладно! Мне нечего сказать, я простой кузнец. Ну и глашатай воли Валар по совместительству.
-
-Мирдания: 
-[[- Ага, так и сказал бы Саурон.|Forge17][$annatarAffection = $annatarAffection+5]]
-[[- Я тоже простой кузнец! И в Сауроне, честно говоря, не разбираюсь.|Forge17]]
-
-
-:: Forge17 [OuterForge Cel galya] {"position":"2900,1250","size":"100,100"}
-Аннатар: В общем, наша с Келебримбором позиция по этому вопросу не объективна. Лучше спросить совета у эксперта.
-
-Мирдания: 
-[[Точно! Надо обратиться к Малендолу!|EveWall5Igor1]]
-[[Точно! Надо обратиться к леди Галадриэль!|EveWall5Galya1]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge14]]</p>
+<p>2. [[_reply2|Forge14][$annatarAffection = $annatarAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: Forge14 [OuterForge annatar cel] {"position":"2900,875","size":"100,100"}
+<<nobr>>
 
-:: Forge2 [Cel OuterForge] {"position":"1375,625","size":"100,100"}
-Келебримбор: Моя дорогая Мирдания, я рад видеть тебя здесь еще и потому, что нам предстоит весьма важная работа! Сам светлый государь Гил-Галад поручил нашей кузнице выковать для него боевой доспех!
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Да, что насчет Аннатара, владыка?">>
+<<set _reply1 to "Ох...">>
+<<case "en">>
+<<set _npcReply to "Yes, what is it about Annatar, my Lord?">>
+<<set _reply1 to "Oh-uh...">>
+<</switch>>
 
-Мирдания: 
-[[- Воистину, такая задача под силу лишь эрегионским мастерам!|Forge3][$celAffection = $celAffection + 5]]
-[[- Доспех? Но ведь мы здесь занимаемся куда более филигранной работой, владыка…|Forge3]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge15]]</p>
+</div>
+</div>
+<</nobr>>
 
 
-:: Forge3 [Cel OuterForge] {"position":"1375,750","size":"100,100"}
-Келебримбор: О, Мирдания, это должен быть не просто доспех! Это символ власти нашего повелителя, свидетельство его мудрости и благородства! Он должен не только защищать его от вражеского оружия, но и демонстрировать его непоколебимую мощь! Он должен облегать его сильное атлетичное тело и в точности повторять очертания каждого кубика его нолдорского пресса! Каждый из них - произведение искусства, Мирдания! Я чуть не упал, когда снимал с него мерки…
+:: Forge15 [OuterForge cel annatar] {"position":"2900,1000","size":"100,100"}
+<<nobr>>
 
-Мирдания: 
-[[- Несомненно, мастер Келебримбор! Наш ослепительный царь Гил-Галад достоин лишь самого лучшего доспеха в Средиземье!|Forge4]]
-[[- Ах, владыка, вы ведь тоже невероятно прекрасный и талантливый мужчина из рода нолдор! Хотелось бы и мне оказаться с вами во время снятия мерок…|Forge4][$celAffection = $celAffection + 10]]
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Да ничего, собственно.">>
+<<set _reply1 to "Погодите… Появился в Эрегионе недавно… Пришел откуда-то с юга…">>
+<<set _reply2 to "Может, выслушаем самого Аннатара?">>
+<<case "en">>
+<<set _npcReply to "Well, nothing, really.">>
+<<set _reply1 to "Wait. You appeared in Eregion recently, you came here from somewhere in the South…">>
+<<set _reply2 to "Maybe we should listen to Annatar himself?">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge16.1]]</p>
+<p>2. [[_reply2|Forge16.2][$celAffection = $celAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
-:: Forge4 [Cel OuterForge] {"position":"1375,875","size":"100,100"}
-Келебримбор: Что ж, Мирдания, работы нам предстоит много. Скорее же, приступай!
+:: Forge16.1 [OuterForge annatar cel] {"position":"2900,1125","size":"100,100"}
+<<nobr>>
 
-[[Отправиться в цех|InnerForge1]]
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, я понял, на что ты намекаешь. Но неужели нашего владыку Келебримбора настолько легко одурачить?">>
+<<set _reply1 to "Нет, конечно нет!">>
+<<set _reply2 to "Ну, как знать. Саурон ведь умелый мастер обмана…">>
+<<case "en">>
+<<set _npcReply to "Oh, I see what you are hinting at. But could our Lord Celebrimbor really be fooled so easily?">>
+<<set _reply1 to "No, of course not!">>
+<<set _reply2 to "Well, who knows. After all, Sauron is a powerful master of deceit.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge17]]</p>
+<p>2. [[_reply2|Forge17][$annatarAffection = $annatarAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge16.2 [OuterForge cel annatar] {"position":"3025,1125","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "ANNA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "То есть, когда я говорю, что шестнадцать кубиков пресса - это перебор, то мы Аннатара не слушаем, а теперь… Ну, впрочем, и ладно! Мне нечего сказать, я простой кузнец. Ну и глашатай воли Валар по совместительству.">>
+<<set _reply1 to "Ага, так и сказал бы Саурон.">>
+<<set _reply2 to "Я тоже простой кузнец и не понимаю, почему вместо простой ковки занимаюсь интригами и расследованиями!">>
+<<case "en">>
+<<set _npcReply to "So when I say that sixteen-pack abdominals is too much, you won’t listen to Annatar, but now… Well, fine! I have nothing to say, I am a mere blacksmith. Along with a part-time emissary of the Valar.">>
+<<set _reply1 to "This is exactly what Sauron would say.">>
+<<set _reply2 to "I am a mere blacksmith too and I do not understand why I investigate scheming instead of simply doing my forging!">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge17][$annatarAffection = $annatarAffection+5]]</p>
+<p>2. [[_reply2|Forge17]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge17 [OuterForge cel galya] {"position":"2900,1250","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to " В общем, наша с Келебримбором позиция по этому вопросу не объективна. Лучше спросить совета у эксперта.">>
+<<set _reply1 to "Точно! Надо обратиться к Малендолу!">>
+<<set _reply2 to "Точно! Надо обратиться к леди Галадриэль!">>
+<<case "en">>
+<<set _npcReply to "Well, our stance on this matter proves biased. It would be wise to ask advice from an expert.">>
+<<set _reply1 to "That is right! I should ask Malendol!">>
+<<set _reply2 to "That is right! I should ask Lady Galadriel!">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. <i>[[_reply1|EveWall5Igor1]]</i>
+</p>
+<p>2. <i>[[_reply2|EveWall5Galya1]]</i></p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge2 [cel OuterForge] {"position":"1375,625","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Моя дорогая Мирдания, я рад видеть тебя здесь еще и потому, что нам предстоит весьма важная работа! Сам светлый государь Гил-Галад поручил нашей кузнице выковать для него боевой доспех!">>
+<<set _reply1 to "Воистину, такая задача под силу лишь эрегионским мастерам!">>
+<<set _reply2 to "Доспех? Но ведь мы здесь занимаемся куда более филигранной работой, владыка…">>
+<<case "en">>
+<<set _npcReply to "My dear Mirdania, there is one more reason I am so pleased to see you. We have quite an important task to be done. No other than our High King Gil-galad has entrusted to us the forging of battle armour for him.">>
+<<set _reply1 to "Indeed, such a task can only be done by Eregion craftsmen!">>
+<<set _reply2 to "Battle armour? But what we do here is much more delicate work, my lord.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge3][$celAffection = $celAffection + 5]]</p>
+<p>2. [[_reply2|Forge3]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge3 [cel OuterForge] {"position":"1375,750","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, Мирдания, это должен быть не просто доспех! Это символ власти нашего повелителя, свидетельство его мудрости и благородства! Он должен не только защищать его от вражеского оружия, но и демонстрировать его непоколебимую мощь! Он должен облегать его сильное атлетичное тело и в точности повторять очертания каждого кубика его нолдорского пресса! Каждый из них - произведение искусства, Мирдания! Я чуть не упал, когда снимал с него мерки…">>
+<<set _reply1 to "Несомненно, мастер Келебримбор! Наш ослепительный царь Гил-Галад достоин лишь самого лучшего доспеха в Средиземье!">>
+<<set _reply2 to "Ах, владыка, вы ведь тоже невероятно прекрасный и талантливый мужчина из рода нолдор! Хотелось бы и мне оказаться с вами во время снятия мерок…">>
+<<case "en">>
+<<set _npcReply to "Oh, Mirdania, it has to be not mere armour! It should be a symbol of our King’s power, a testimony to his wisdom and dignity! Not only must it protect him from enemy weapons, but also prove his immense strength! It has to fit his athletic physique and mirror the outlines of all Noldorin abdominals of his. Each of them is a masterpiece, Mirdania! I nearly fell over in awe while I was taking measurements.">>
+<<set _reply1 to "Certainly, Master Celebrimbor! Our dazzling King Gil-galad is deserving of the best armour in Middle-Earth!">>
+<<set _reply2 to "Oh my Lord, you are an incredibly beautiful and skilled Noldo yourself! I wish I could be close to you while taking measurements…">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge4]]</p>
+<p>2. [[_reply2|Forge4][$celAffection = $celAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge4 [cel OuterForge] {"position":"1375,875","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEK0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Что ж, Мирдания, работы нам предстоит много. Скорее же, приступай!">>
+<<set _reply1 to "Отправиться в цех">>
+<<case "en">>
+<<set _npcReply to "Well, Mirdania, we have got a lot of work to do. You had better begin it now.">>
+<<set _reply1 to "To the forge">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. <i>[[_reply1|InnerForge1]]</i></p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Forge5 [OuterForge] {"position":"1975,500","size":"100,100"}
-Мирдания: Ладушки, работа сама себя не сделает, надо приступать…
-[[Приступить|Forge6]]
+<<nobr>>
+
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ладушки, работа сама себя не сделает, надо приступать…">>
+<<set _reply1 to "Приступить">>
+<<case "en">>
+<<set _npcReply to "Well, the work won’t do itself, I have to start.">>
+<<set _reply1 to "Start">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Forge6]]</div>
+<</nobr>>
 
 
+:: Forge6 [OuterForge cel] {"position":"1975,625","size":"100,100"}
+<<nobr>>
 
-:: Forge6 [OuterForge Cel] {"position":"1975,625","size":"100,100"}
-Келебримбор: О, Мирдания. Как дела? Какой статус по броне?
+<<set _npcPic to "KEK0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, Мирдания. Как дела? Какой статус по броне?">>
+<<set _reply1 to "Эээ… Работаю, мастер Келебримбор, процесс небыстрый.">>
+<<set _reply2 to "Владыка Келебримбор, я должна признаться… Сейчас я занимаюсь нашим проектом с кольцами власти. Но подготовительные работы по доспеху ведет Аннатар, сами знаете, он очень талантливый кузнец.">>
+<<case "en">>
+<<set _npcReply to "Good day, Mirdania. How do you do? Give me the armour report.">>
+<<set _reply1 to "Well… I’m working on it, Master Celebrimbor. It is not a fast process.">>
+<<set _reply2 to "Lord Celebrimbor, I have a confession to make. I am currently working on our project on the Rings of Power. But the preparatory work for the armour is being conducted by Annatar, he is a great craftsman, as you know.">>
+<</switch>>
 
-Мирдания: 
-[[- Эээ… Работаю, мастер Келебримбор, процесс небыстрый.|Forge7lie]]
-[[- Владыка Келебримбор, я должна признаться… Сейчас я занимаюсь нашим проектом с кольцами власти. Но подготовительные работы по доспеху ведет Аннатар, сами знаете, он очень талантливый кузнец.|Forge7true][$celAffection = $celAffection+5]]
-
-
-
-:: Forge7lie [OuterForge Cel] {"position":"1975,750","size":"100,100"}
-Келебримбор: Прости, что дергаю с этим, просто нужно, чтобы Гил-Галад остался доволен результатом. Сама понимаешь, этот доспех должен не только подчеркивать его стать, но и как бы…Даже немного превозносить нашего государя, понимаешь?
-
-Мирдания: 
-[[- Я посоветуюсь на эту тему с Аннатаром.|Forge8]]
-[[- Несомненно наш царь обладает выдающимися достоинствами. Но не беспокойтесь, эти достоинства не будут влиять на аэродинамические свойства брони.|Forge8][$celAffection = $celAffection + 5]]
-
-
-:: Forge7true [OuterForge Cel] {"position":"2100,750","size":"100,100"}
-Келебримбор: Вот как? Впредь сообщай о таком мне, Мирдания, я ведь должен знать, что происходит в моей кузнице.
-
-Мирдания: 
-[[- Непременно, владыка. Все схвачено, доспех будет представлен в лучшем виде.|Forge8]]
-[[- Конечно, мастер Келебримбор. Просто по части мужского самомнени… пресса Аннатар действительно лучший специалист, чем я.|Forge8]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge7lie]]</p>
+<p>2. [[_reply2|Forge7true][$celAffection = $celAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: Forge7lie [OuterForge cel] {"position":"1975,750","size":"100,100"}
+<<nobr>>
 
-:: Forge8 [Cel OuterForge] {"position":"1975,875","size":"100,100"}
-Келебримбор: Даже не знаю, может, шести кубиков пресса будет недостаточно? Может, сделать восемь?
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Прости, что дергаю с этим, просто нужно, чтобы Гил-Галад остался доволен результатом. Сама понимаешь, этот доспех должен не только подчеркивать его стать, но и как бы… Даже немного превозносить нашего государя, понимаешь?">>
+<<set _reply1 to "Я посоветуюсь на эту тему с Аннатаром.">>
+<<set _reply2 to "Несомненно наш царь обладает выдающимися достоинствами. Но не беспокойтесь, эти достоинства не будут влиять на аэродинамические свойства брони.">>
+<<case "en">>
+<<set _npcReply to "Sorry for pestering you, but I want Gil-galad to be pleased with the result. Not only must the armour highlight our King’s stature, but sort of… compliment him, you know?">>
+<<set _reply1 to "I shall consult Annatar on this matter.">>
+<<set _reply2 to "Obviously, our King is endowed with outstanding strengths. Don’t you worry, those strengths won’t affect the aerodynamic properties of the armour.">>
+<</switch>>
 
-Мирдания: 
-[[- Да можно хоть десять, если государь согласует прототип.|Forge9]]
-[[- Вам виднее, владыка. Я бы прислушалась к вашему мнению, у вас безупречный вкус.|Forge9][$celAffection = $celAffection+10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge8]]</p>
+<p>2. [[_reply2|Forge8][$celAffection = $celAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
-:: Forge9 [OuterForge Cel] {"position":"1975,1000","size":"100,100"}
-Келебримбор: А может, все двенадцать… Назовем этот тип брони МК2 “Трилобит”… О чем я? Мирдания, ты, кажется, напряжена. Что-то случилось?
+:: Forge7true [OuterForge cel] {"position":"2100,750","size":"100,100"}
+<<nobr>>
 
-Мирдания: 
-[[- Все в порядке, владыка. Просто наткнулась по пути сюда на Малендола.|Forge10][$celAffection = $celAffection+5]]
-[[- Я вдруг задумалась о безопасности нашего королевства. Хорошо, что наши стражи бдительны и не позволят злу сюда проникнуть.|Forge10]]
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Вот как? Впредь сообщай о таком мне, Мирдания, я ведь должен знать, что происходит в моей кузнице.">>
+<<set _reply1 to "Непременно, владыка. Все схвачено, доспех будет представлен в лучшем виде.">>
+<<set _reply2 to "Конечно, мастер Келебримбор. Просто по части мужского самомнени… пресса Аннатар действительно лучший специалист, чем я.">>
+<<case "en">>
+<<set _npcReply to "Indeed? You should henceforth report such things to me, Mirdania. I have to know what is happening in my forge.">>
+<<set _reply1 to "As you command, my Lord. We have it covered, the armour will be executed in the best way possible.">>
+<<set _reply2 to "Yes, Master Celebrimbor. The thing is, Annatar is more suitable for the task in terms of the male ego, I mean, male abdominals.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge8]]</p>
+<p>2. [[_reply2|Forge8]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge8 [cel OuterForge] {"position":"1975,875","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEKB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Даже не знаю, может, шести кубиков пресса будет недостаточно? Может, сделать восемь?">>
+<<set _reply1 to "Да можно хоть десять, если государь согласует прототип.">>
+<<set _reply2 to "Вам виднее, владыка. Я бы прислушалась к вашему мнению, у вас безупречный вкус.">>
+<<case "en">>
+<<set _npcReply to "I am in doubt, what if six-pack abdominals will not be enough? Perhaps, we should make it an eight-pack?">>
+<<set _reply1 to "We can make it even a ten-pack if the King will agree on the draft project.">>
+<<set _reply2 to "You know best, my Lord. I think I should heed your advice as your taste is impeccable.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge9]]</p>
+<p>2. [[_reply2|Forge9][$celAffection = $celAffection+10]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: Forge9 [OuterForge cel] {"position":"1975,1000","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "А может, все двенадцать… Назовем этот тип брони МК2 “Трилобит”… О чем я? Мирдания, ты, кажется, напряжена. Что-то случилось?">>
+<<set _reply1 to "Все в порядке, владыка. Просто наткнулась по пути сюда на Малендола.">>
+<<set _reply2 to "Я вдруг задумалась о безопасности нашего королевства. Хорошо, что наши стражи бдительны и не позволят злу сюда проникнуть.">>
+<<case "en">>
+<<set _npcReply to "How about going all in for twelve? Should i mark this kind of armour with… Wait, what was I saying? Mirdania, you seem tense. Did something happen?">>
+<<set _reply1 to "I am fine, my Lord. I simply met Malendol on my way here.">>
+<<set _reply2 to "I was thinking about the safety of our kingdom. I am so glad that our guards are vigilant and they will not let any evil in.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Forge10][$celAffection = $celAffection+5]]</p>
+<p>2. [[_reply2|Forge10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Inner Forge7 [InnerForge annatar] {"position":"2250,625","size":"100,100"}
-Аннатар: Мирдания, ты вернулась! Я почти закончил с дизайн-макетом. Все думаю, может, добавить государю пару кубиков пресса? Я себе так делал, то есть, тому своему знакомому, конечно.
+<<nobr>>
 
-Мирдания: 
-[[- Святой Манве, я уже не могу слушать про кубики Гил-Галада.|InnerForge8]]
-[[- Аннатар, я полностью доверяю твоему вкусу. Сделай столько кубиков, сколько поместится, и давай скорее в отправим на согласование.|InnerForge8][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания, ты вернулась! Я почти закончил с дизайн-макетом. Все думаю, может, добавить государю пару кубиков пресса? Я себе так делал, то есть, тому своему знакомому, конечно.">>
+<<set _reply1 to "Святой Манве, я уже не могу слушать про кубики Гил-Галада.">>
+<<set _reply2 to "Аннатар, я полностью доверяю твоему вкусу. Сделай столько кубиков, сколько поместится, и давай скорее в отправим на согласование.">>
+<<case "en">>
+<<set _npcReply to "Mirdania, you have returned! The layout design is nearly finished. I have been thinking, perhaps, we might add an extra couple of abdominals? I have done the same for myself, I mean, for my friend, of course.">>
+<<set _reply1 to "Holy Manwë, I cannot hear about those abdominals anymore.">>
+<<set _reply2 to "Annatar, I completely trust your judgement. Make as many abdominals as you can fit so we could send the armour for approval sooner.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge8]]</p>
+<p>2. [[_reply2|InnerForge8][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge1 [InnerForge] {"position":"1525,500","size":"100,100"}
-Мирдания: Доспех для государя Гил-галада… Это не так уж просто, но я непременно справлюсь!
+<<nobr>>
 
-[[Далее|InnerForge2]]
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Доспех для государя Гил-галада… Это не так уж просто, но я непременно справлюсь!">>
+<<set _reply1 to "Далее">>
+<<case "en">>
+<<set _npcReply to "Armour for our High King Gil-galad… it is no easy task, but I will succeed!">>
+<<set _reply1 to "Proceed">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|InnerForge2]]</div>
+<</nobr>>
 
 
 :: InnerForge10 [InnerForge annatar] {"position":"2250,1000","size":"100,100"}
-Аннатар: Моя дорогая Мирдания, придет время - и ты поймешь, насколько неоценимым благодаря работе над кольцами был твой вклад в историю Средиземья…
+<<nobr>>
 
-Мирдания: 
-[[- Будем надеяться, что мой труд пойдет во благо.|Wall1]]
-[[- Не сомневаюсь. Ладно, давай возвращаться к работе, пока мы опять не отвлеклись на кубики пресса государя Гил-Галада.|Wall1][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Моя дорогая Мирдания, придет время - и ты поймешь, насколько неоценимым благодаря работе над кольцами был твой вклад в историю Средиземья…">>
+<<set _reply1 to "Будем надеяться, что мой труд пойдет во благо.">>
+<<set _reply2 to "Не сомневаюсь. Ладно, давай возвращаться к работе, пока мы опять не отвлеклись на кубики пресса государя Гил-Галада.">>
+<<case "en">>
+<<set _npcReply to "My dearest Mirdania, when the time comes, you will realize how invaluable your contribution is to the history of Middle-Earth… ">>
+<<set _reply1 to "Let us hope that my efforts will be put to good use.">>
+<<set _reply2 to "I’ve no doubt. Well, we should set to work until we are distracted again by High King Gil-galad’s abdominals.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall1]]</p>
+<p>2. [[_reply2|Wall1][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 
 :: InnerForge11 [InnerForge] {"position":"3700,500","size":"100,100"}
-Мирдания: Аннатар, ты здесь? У меня есть пара вопросов… И скажу честно, они касаются некоторых оснований полагать, что ты был не совсем честен с жителями Эрегиона.
+<<nobr>>
 
-[[Предъявить|InnerForge12]]
+<<set _npcPic to "MIRA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Аннатар, ты здесь? У меня есть пара вопросов… И скажу честно, они касаются некоторых оснований полагать, что ты был не совсем честен с жителями Эрегиона.">>
+<<set _reply1 to "Предъявить">>
+<<case "en">>
+<<set _npcReply to "Annatar, are you here? I have some questions for you, and, speaking frankly, they concern the fact that you have not exactly been honest with the people of Eregion.">>
+<<set _reply1 to "Accuse">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|InnerForge12]]
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge12 [InnerForge annatar] {"position":"3700,625","size":"100,100"}
-Аннатар (далее он в ПИЗДОПЕРЬЯХ!): О, Мирдания! Это прискорбно, не могу даже представить, чем мог заставить тебя так считать…
+<<nobr>>
 
-Мирдания:
-[[- Прошу, развей мои подозрения! Ты ведь не можешь выдавать себя за… Кого-то, кого мы не пожелали бы здесь видеть?|InnerForge13]]
-[[- Аннатар, что на тебе надето?|InnerForge13][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "SAU0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, Мирдания! Это прискорбно, не могу даже представить, чем мог заставить тебя так считать…">>
+<<set _reply1 to "Прошу, развей мои подозрения! Ты ведь не можешь выдавать себя за… Кого-то, кого мы не пожелали бы здесь видеть?">>
+<<set _reply2 to "Аннатар, что на тебе надето?">>
+<<case "en">>
+<<set _npcReply to "Oh, Mirdania! I am so sad, I cannot even imagine what I have done to make you think of me in such a way…">>
+<<set _reply1 to "Please, allay my fears! You could not really be someone we would not like to have here?">>
+<<set _reply2 to "Annatar, what are you wearing?">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge13]]</p>
+<p>2. [[_reply2|InnerForge13][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge13 [InnerForge annatar] {"position":"3700,750","size":"100,100"}
-Аннатар (в ПИЗДОПЕРЬЯХ!): Знаешь, Мирдания… Ты доказала свою преданность кузнечному делу, которую я весьма ценю в женщинах. Думаю, я могу открыть тебе тайну. Только обещай не пугаться и не звать стражу.
+<<nobr>>
 
-Мирдания:
-[[- Обещаю.|InnerForge14][$annatarAffection = $annatarAffection + 5]]
-[[- Не обещаю.|InnerForge14]]
+<<set _npcPic to "SAUB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Знаешь, Мирдания… Ты доказала свою преданность кузнечному делу, которую я весьма ценю в женщинах. Думаю, я могу открыть тебе тайну. Только обещай не пугаться и не звать стражу.">>
+<<set _reply1 to "Обещаю.">>
+<<set _reply2 to "Не обещаю.">>
+<<case "en">>
+<<set _npcReply to "You know, Mirdania, you have proved your commitment to blacksmithing, and I really admire such women. I suppose I can reveal my secret to you. But promise you won’t be scared and call out for guards.">>
+<<set _reply1 to "I promise.">>
+<<set _reply2 to "I can’t promise that.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge14][$annatarAffection = $annatarAffection + 5]]</p>
+<p>2. [[_reply2|InnerForge14]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge14 [InnerForge annatar] {"position":"3700,875","size":"100,100"}
-Аннатар (ПИЗДОПЕРЬЯ): Моя дорогая Мирдания. Дело в том, что на самом деле я…
+<<nobr>>
 
-[[- Ох...|InnerForge15]]
+<<set _npcPic to "SAUB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Моя дорогая Мирдания. Дело в том, что на самом деле я…">>
+<<set _reply1 to "Ох...">>
+<<case "en">>
+<<set _npcReply to "My dearest Mirdania. The thing is, that I am really…">>
+<<set _reply1 to "Oh...">>
+<</switch>>
 
-
-:: InnerForge15 [InnerForge annatar Cel] {"position":"3700,1000","size":"100,100"}
-Появляется Келебримбор (Аннатар в пиздоперьях стоит рядом): 
-Аннатар, вот ты где! Как там дела с прототипом доспеха? Сколько кубиков ты в итоге… Что это на тебе надето?
-
-[[- Ох...|InnerForge16]]
-
-
-:: InnerForge16 [InnerForge Cel annatar] {"position":"3700,1125","size":"100,100"}
-Аннатар: Ах, это… Приоделся, чтобы показать тебе свои прототипы за бокалом вина первой эпохи. Как тебе?
-
-Мирдания:
-[[- Я поняла, о какой тайне речь. Вы двое состоите в низменных плотских отношениях, которые ставите превыше кузнечного дела!|EveWall5GalyaFin]]
-[[- Постойте. Владыка Келебримбор, мы как будто постоянно уходим от темы. Ведь не может же быть такого, что тайна Аннатара заключается в том, что он… Ну, Саурон|InnerForge17]]
-
-
-:: InnerForge17 [InnerForge Cel annatar] {"position":"3700,1250","size":"100,100"}
-Келебримбор: Мирдания! Думаешь, я бы мог допустить подобное? Пребывание Саурона здесь, в Эрегионе?
-
-Мирдания:
-[[- Да! Саурон - мастер обмана! Он кого угодно мог ввести в заблуждение!|InnerForge18.1]]
-[[- Да! Зная вашу страсть к литью и ковке - еще как!|InnerForge18.2][$celAffection = $celAffection + 10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge15]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: InnerForge15 [InnerForge annatar cel] {"position":"3700,1000","size":"100,100"}
+<<nobr>>
 
-:: InnerForge18.1 [InnerForge annatar Cel] {"position":"3700,1375","size":"100,100"}
-Аннатар: ладно, ладно, я уже понял, что меня раскрыли. Скажем прямо, Саурон - не самое красивое из моих имен. Реально, орки просто не в курсе, что это буквально перевод слова “отвратительный” на синдарин. Так что можешь называть меня, как тебе больше нравится, можешь даже новое имя придумать.
+<<set _npcPic to "KEK0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Аннатар, вот ты где! Как там дела с прототипом доспеха? Сколько кубиков ты в итоге… Что это на тебе надето?">>
+<<set _reply1 to "Ох......">>
+<<case "en">>
+<<set _npcReply to "Annatar, there you are! What about the armour prototype? What did you decide about the abdominals?.. What are you wearing?">>.
+<<set _reply1 to "Oh......">>
+<</switch>>
 
-Мирдания:
-[[- Sen gaer! Ни за что не вернусь больше в кузницу! Ты еще и трогал мои волосы! Какой ужас!|EveWall5GalyaFin]]
-[[- Просто невероятно! Кто бы мог подумать, что Саурон такой талантливый кузнец и симпатичный мужчна… Хоть и в работе с ювелирными изделиями, скажем прямо, еще есть, к чему стремиться…|InnerForge19][$annatarAffection = $annatarAffection + 10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge16]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: InnerForge16 [InnerForge cel annatar] {"position":"3700,1125","size":"100,100"}
+<<nobr>>
 
-:: InnerForge18.2 [InnerForge Cel annatar] {"position":"3825,1375","size":"100,100"}
-Келебримбор: Знаешь, что, Мирдания? Да, я знал. Поэтому и скрывал его пребывание здесь от Галадриэль и Гил-Галада - они тоже знают. Да и в принципе - это же довольно очевидно, он не так уж и скрывается. Еще и вырядился в эти злодейские перья, пресвятой Манве… Подумай сама, насколько редко встречаются такие специалисты в литье! Наконец мне есть, с кем обсудить сплавы за кувшином красного. Как говорил брат моего отца, феаноринга можно gweria только если он сам захочет быть gwerien!
+<<set _npcPic to "SAUA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ах, это… Приоделся, чтобы показать тебе свои прототипы за бокалом вина первой эпохи. Как тебе?">>
+<<set _reply1 to "Я поняла, о какой тайне речь. Вы двое состоите в низменных плотских отношениях, которые ставите превыше кузнечного дела!">>
+<<set _reply2 to "Постойте. Владыка Келебримбор, мы как будто постоянно уходим от темы. Ведь не может же быть такого, что тайна Аннатара заключается в том, что он… Ну, Саурон?">>
+<<case "en">>
+<<set _npcReply to "Oh, this. I have dressed up so that I could show you my prototypes over a glass of fine wine from the First Age. How does that sound?">>
+<<set _reply1 to "I see now what kind of secrets you were talking about. You two are in a relationship of the basest, carnal sort! And you dare place this relationship above blacksmithing!">>
+<<set _reply2 to "Wait a moment. Lord Celebrimbor, it seems to me that we keep changing the subject. Is it possible that the secret which Annatar holds is that he is in fact… well, Sauron?">>
+<</switch>>
 
-Мирдания:
-[[- Так это что… И правда Саурон?...|InnerForge19]
-[[- Ну вы даете, владыка Келебримбор…|InnerForge19][$celAffection = $celAffection + 10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5GalyaFin]]</p>
+<p>2. [[_reply2|InnerForge17]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: InnerForge17 [InnerForge cel annatar] {"position":"3700,1250","size":"100,100"}
+<<nobr>>
 
-:: InnerForge19 [InnerForge annatar Cel] {"position":"3700,1500","size":"100,100"}
-Келебримбор: Na-den gellin men! Sauron na meldir lín!
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания! Думаешь, я бы мог допустить подобное? Пребывание Саурона здесь, в Эрегионе?">>
+<<set _reply1 to "Да! Саурон - мастер обмана! Он кого угодно мог ввести в заблуждение!">>
+<<set _reply2 to "Да! Зная вашу страсть к литью и ковке - еще как!">>
+<<case "en">>
+<<set _npcReply to "Mirdania! Do you really think I could allow Sauron’s presence here, in Eregion?">>
+<<set _reply1 to "Yes! Sauron is the master of deceit, he can misguide anyone!">>
+<<set _reply2 to "Yes! Especially considering your passion for casting and forging.">>
+<</switch>>
 
-Мирдания:
-[[- Ú-na mellon aníron! Ar sí ista beleg!|InnerForge20]
-[[- Sí penna na man i cyrf hain! Nai anno beleg cam tass nín!|InnerForge20][$celAffection = $celAffection + 10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge18.1]]</p>
+<p>2. [[_reply2|InnerForge18.2][$celAffection = $celAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
+
+:: InnerForge18.1 [InnerForge annatar cel] {"position":"3700,1375","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "SAUA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ладно, ладно, я уже понял, что меня раскрыли. Скажем прямо, Саурон - не самое красивое из моих имен. Реально, орки просто не в курсе, что это буквально перевод слова “отвратительный” на квенья. Так что можешь называть меня, как тебе больше нравится, можешь даже новое имя придумать.">>
+<<set _reply1 to "Sen gaer! Ни за что не вернусь больше в кузницу! Ты еще и трогал мои волосы! Какой ужас!">>
+<<set _reply2 to "Просто невероятно! Кто бы мог подумать, что Саурон такой талантливый кузнец и симпатичный мужчина… Хоть и в работе с ювелирными изделиями, скажем прямо, еще есть, к чему стремиться…">>
+<<case "en">>
+<<set _npcReply to "Well, well, I see that my disguise has been uncovered. To put it bluntly, Sauron is not the prettiest of the names I use. Seriously, the Orcs are simply unaware of the fact that in Quenya ‘Sauron’ means ‘the Abhorred’. So, you can call me whatever you like. If you want, you can even invent a new name for me.">>
+<<set _reply1 to "Sen gaer! I shall never return to this forge again! And to think that you touched my hair! How horrible!">>
+<<set _reply2 to "How incredible! Who would ever imagine that Sauron could turn such a gifted blacksmith and a handsome man… Even though he certainly lacks some mastery in terms of jewellery.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall5GalyaFin]]</p>
+<p>2. [[_reply2|InnerForge19][$annatarAffection = $annatarAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: InnerForge18.2 [InnerForge cel annatar] {"position":"3825,1375","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEKA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Знаешь, что, Мирдания? Да, я знал. Поэтому и скрывал его пребывание здесь от Галадриэль и Гил-Галада - они тоже знают. Да и в принципе - это же довольно очевидно, он не так уж и скрывается. Еще и вырядился в эти злодейские перья, пресвятой Манве… Подумай сама, насколько редко встречаются такие специалисты в литье! Наконец мне есть, с кем обсудить сплавы за кувшином красного. Как говорил брат моего отца, феаноринга можно gweria только если он сам захочет быть gwerien!">>
+<<set _reply1 to "Так это что… И правда Саурон?...">>
+<<set _reply2 to "Ну вы даете, владыка Келебримбор…">>
+<<case "en">>
+<<set _npcReply to "You know what, Mirdania? Yes, I knew that all along. That is why I have been hiding him here from Galadriel and Gil-galad, they would also be able to recognise him. As a matter of fact, this is rather obvious, he is not even good at hiding. And now he has clothed himself in these sinister-looking feathers, oh Holy Manwë.
+However, have you ever considered how rarely one can meet such a skillful master at forgery? Finally, I have someone to discuss alloys with over a jug of wine. As my uncle used to say, one can gweria a Fëanorian only if a Fëanorian wishes to be gwerien.
+">>
+<<set _reply1 to "So… he is Sauron indeed?">>
+<<set _reply2 to "Master Celebrimbor, I am impressed.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge19]]</p>
+<p>2. [[_reply2|InnerForge19][$celAffection = $celAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: InnerForge19 [InnerForge annatar cel] {"position":"3700,1500","size":"100,100"}
+<<nobr>>
+
+<<set _npcPic to "KEK0.png">>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">Na-den gellin men! Sauron na meldir lín!</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[- Ú-na mellon aníron! Ar sí ista beleg!|InnerForge20]]</p>
+<p>2. [[- Sí penna na man i cyrf hain! Nai anno beleg cam tass nín!|InnerForge20][$celAffection = $celAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge2 [InnerForge annatar] {"position":"1525,625","size":"100,100"}
-Аннатар: Мирдания! Как чудесно, что ты озарила эту кузницу своей красотой!
+<<nobr>>
 
-Мирдания: 
-[[- Аннатар! Зачем так подкрадываться, вдруг у меня раскаленный прут в руке?!|InnerForge3][$annatarAffection = $annatarAffection+5]]
-[[- Аннатар, вижу, ты тоже трудишься с самого утра.|InnerForge3]]
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Мирдания! Как чудесно, что ты озарила эту кузницу своей красотой!">>
+<<set _reply1 to "Аннатар! Зачем так подкрадываться, вдруг у меня раскаленный прут в руке?!">>
+<<set _reply2 to "Аннатар, вижу, ты тоже трудишься с самого утра.">>
+<<case "en">>
+<<set _npcReply to "How wonderful it is of you to light up this forge with your beauty!">>
+<<set _reply1 to "Annatar! Why sneak up on me in such a manner? What if I had a red-hot rod in my hand?">>
+<<set _reply2 to "Annatar, you have been working bright and early too, haven’t you?">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge3][$annatarAffection = $annatarAffection+5]]</p>
+<p>2. [[_reply2|InnerForge3]]</p>
+</div>
+</div>
+<</nobr>>
 
 
+:: InnerForge20 [InnerForge cel annatar] {"position":"3950,1500","size":"100,100"}
+<<nobr>>
 
-:: InnerForge20 [InnerForge Cel annatar] {"position":"3950,1500","size":"100,100"}
-Аннатар: Meleth nín, annon pant! Le mabo am Mordor ir vathon i aran lín.
+<<set _npcPic to "SAUB.png">>
 
-Мирдания:
-[[- Ú aníron am Mordor!|Fin]
-[[- Ú cenin cor lín erin cam nín!|Fin][$annatarAffection = $annatarAffection + 10]]
-
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">Meleth nín, annon pant! Le mabo am Mordor ir vathon i aran lín.</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[- Ú aníron am Mordor!|FinForge]]</p>
+<p>2. [[- Ú cenin cor lín erin cam nín!|FinForge][$annatarAffection = $annatarAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge3 [InnerForge annatar] {"position":"1525,750","size":"100,100"}
-Аннатар: Прости мою резкость, но я знаю о поручении владыки Келебримбора. Броня для государя Гил-Галада - несомненно важный и почетный труд, который вполне тебе по силам, Мирдания, но у меня есть к тебе предложение. Давай, я займусь броней сам, а ты поможешь мне с более… деликатной задачей?
+<<nobr>>
 
-Мирдания: 
-[[- Это дело поручил мне лично владыка Келебримбор… Но ты меня заинтриговал.|InnerForge4][$annatarAffection = $annatarAffection +5]]
-[[- Честно говоря, звучит как предложение, после которого я пойду прямо в комитет по работе с эльфийским харрасментом, но продолжай.|InnerForge4]]
+<<set _npcPic to "ANNA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Прости мою резкость, но я знаю о поручении владыки Келебримбора. Броня для государя Гил-Галада - несомненно важный и почетный труд, который вполне тебе по силам, Мирдания, но у меня есть к тебе предложение. Давай, я займусь броней сам, а ты поможешь мне с более… деликатной задачей?">>
+<<set _reply1 to "Это дело поручил мне лично владыка Келебримбор… Но ты меня заинтриговал.">>
+<<set _reply2 to "Честно говоря, звучит как предложение, после которого я пойду прямо в комитет по работе с эльфийским харрасментом, но продолжай.">>
+<<case "en">>
+<<set _npcReply to "I apologize for being so brusque, but I know of Lord Celebrimbor’s request. There is no doubt that making armour for High King Gil-galad is an honour. It is an important task which you are rather capable of fulfilling, but I have an offer for you. Let me make the armour, while you help me with… a more delicate job.">>
+<<set _reply1 to "It was Lord Celebrimbor himself who entrusted me to do it… but your offer sounds intriguing.">>
+<<set _reply2 to "To be frank, this offer sounds like something to be reported to the Elvish Anti-harassment Committee as soon as this conversation is over, but continue.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge4][$annatarAffection = $annatarAffection +5]]</p>
+<p>2. [[_reply2|InnerForge4]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge4 [InnerForge annatar] {"position":"1525,875","size":"100,100"}
-Аннатар: Ничего предосудительного, дорогая, я всего лишь о тех кольцах, которыми мы занимались накануне. Это довольно большая партия, которую нужно изготовить поскорее, и никто лучше тебя не справится с кастами. Я серьезно, твоя мелкая моторика поражает! А броня для Гил-Галада - дай угадаю, нужно, чтобы на кирасе были кубики пресса, которых у нашего короля не то, чтобы много, да? Поверь мне, я отливал себе кирасы с прессом, когда еще… то есть, эээ одному моему знакомому. В общем, в этом я хорош.
+<<nobr>>
 
-Мирдания: 
-[[- Хорошо, посланник Валар, ты меня убедил. Я сделаю твою работу - ты мою.|InnerForge5]]
-[[- Так и быть, если уж ты мастер по части красивых доспехов. Я скорее займусь кольцами, чтобы не задерживать производство.|InnerForge5][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ничего предосудительного, дорогая, я всего лишь о тех кольцах, которыми мы занимались накануне. Это довольно большая партия, которую нужно изготовить поскорее, и никто лучше тебя не справится с кастами. Я серьезно, твоя мелкая моторика поражает! А броня для Гил-Галада - дай угадаю, нужно, чтобы на кирасе были кубики пресса, которых у нашего короля не то, чтобы много, да? Поверь мне, я отливал себе кирасы с прессом, когда еще… то есть, эээ одному моему знакомому. В общем, в этом я хорош.">>
+<<set _reply1 to "Хорошо, посланник Валар, ты меня убедил. Я сделаю твою работу - ты мою.">>
+<<set _reply2 to "Так и быть, если уж ты мастер по части красивых доспехов. Я скорее займусь кольцами, чтобы не задерживать производство.">>
+<<case "en">>
+<<set _npcReply to "Nothing reprehensible, my darling. I was talking about those rings we had been working on earlier. This is quite a large batch which we have to make as fast as possible, and you are best suited for crafting the bezels. I mean it, your fine motor skills are astounding! And as for the armour for Gil-galad, let me guess, the breastplate must show his abdominals which are a bit underdeveloped, am I right? Believe me, I was casting my own breastplates with fine six-pack abdominals when I was… not for myself of course, they were for a friend. I mean, I am good at this.">>
+<<set _reply1 to "Well, the emissary of the Valar, you have convinced me. I will do your job while you will do mine.">>
+<<set _reply2 to "So be it, if you are indeed a master of fine armour. I shall start working on the rings then in order not to hold back the manufacturing.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge5]]</p>
+<p>2. [[_reply2|InnerForge5][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge5 [InnerForge annatar] {"position":"1525,1000","size":"100,100"}
-Аннатар: О, дорогая Мирдания, я знал, что могу на тебя рассчитывать! Ты не только прекрасна, как сама леди Галадриэль, но еще и невероятно талантлива и трудолюбива!
+<<nobr>>
 
-Мирдания: 
-[[- Благодарю тебя, посланник Валар. Такая похвала от тебя - большая честь!|Eregion1]]
-[[- Нет нужды меня расхваливать, я же уже согласилась. Все, Аннатар, нам пора браться за работу.|Eregion1][$annatarAffection = $annatarAffection + 10]]
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, дорогая Мирдания, я знал, что могу на тебя рассчитывать! Ты не только прекрасна, как сама леди Галадриэль, но еще и невероятно талантлива и трудолюбива!">>
+<<set _reply1 to "Благодарю тебя, посланник Валар. Такая похвала от тебя - большая честь!">>
+<<set _reply2 to "Нет нужды меня расхваливать, я же уже согласилась. Все, Аннатар, нам пора браться за работу.">>
+<<case "en">>
+<<set _npcReply to "My dearest Mirdania, I knew I could count on you! You are not only as fair as Lady Galadriel herself, you are also incredibly skilled and hard-working!">>
+<<set _reply1 to "Thank you, the emissary of the Valar. Such praise from you is an honour.">>
+<<set _reply2 to "There is no need to rave on me anymore, I have already agreed. It’s time for us to set to work, Annatar.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Eregion1]]</p>
+<p>2. [[_reply2|Eregion1][$annatarAffection = $annatarAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge6 [InnerForge] {"position":"2250,500","size":"100,100"}
-Мирдания: Появился недавно… Непонятно, откуда… Как будто именно о таком говорила леди…
-[[Прибегнуть к дедукции|Inner Forge7]]
+<<nobr>>
+
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to " Появился недавно… Непонятно, откуда… Как будто именно о таком говорила леди…">>
+<<set _reply1 to "Прибегнуть к дедукции">>
+<<case "en">>
+<<set _npcReply to "Appeared recently, huh? And out of nowhere. It sounds very similar to what Lady Galadriel was talking about.">>
+<<set _reply1 to "Use the power of deduction">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Inner Forge7]]</div>
+<</nobr>>
 
 
 
 :: InnerForge8 [InnerForge annatar] {"position":"2250,750","size":"100,100"}
-Аннатар: Ты чего такая резкая и серьезная, Мирдания? Что-то тебя тревожит?
+<<nobr>>
 
-Мирдания: 
-[[- Мастер Келебримбор тоже только и говорит о прессе нашего государя, мне сложно сосредоточиться.|InnerForge9]]
-[[- Извини, просто я немного задумалась о безопасности Эрегиона. Это должно быть приоритетом, ведь мы занимаемся очень важными проектами.|InnerForge9][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ты чего такая резкая и серьезная, Мирдания? Что-то тебя тревожит?">>
+<<set _reply1 to "Мастер Келебримбор тоже только и говорит о прессе нашего государя, мне сложно сосредоточиться.">>
+<<set _reply2 to "Извини, просто я немного задумалась о безопасности Эрегиона. Это должно быть приоритетом, ведь мы занимаемся очень важными проектами.">>
+<<case "en">>
+<<set _npcReply to "Why are you being so harsh and serious, Mirdania? Is something troubling you?">>
+<<set _reply1 to "Master Celebrimbor keeps on talking about our High King’s muscles too, so it is hard for me to concentrate on my work.">>
+<<set _reply2 to "I am sorry, I was thinking about the safety of Eregion. It should be our main priority as our projects are of great importance.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge9]]</p>
+<p>2. [[_reply2|InnerForge9][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: InnerForge9 [InnerForge annatar] {"position":"2250,875","size":"100,100"}
-Аннатар: Хорошо, что ты понимаешь, что кольца власти - невероятно важный проект.
+<<nobr>>
 
-Мирдания: 
-[[- Вся наша работа важна, Аннатар. Свою часть работы по кольцам я сделаю.|InnerForge10]]
-[[- Кстати, хотела уточнить - в чем именно его важность? Может, я не совсем верно понимаю концепцию…|InnerForge10][$annatarAffection = $annatarAffection + 5]]
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Хорошо, что ты понимаешь, что кольца власти - невероятно важный проект.">>
+<<set _reply1 to "Вся наша работа важна, Аннатар. Свою часть работы по кольцам я сделаю.">>
+<<set _reply2 to "Кстати, хотела уточнить - в чем именно его важность? Может, я не совсем верно понимаю концепцию…">>
+<<case "en">>
+<<set _npcReply to "I am glad you realize that the Rings of Power are a very important project.">>
+<<set _reply1 to "As important as all of our work is, Annatar. Do not doubt me, I will do my share of work on the rings.">>
+<<set _reply2 to "By the way, I was wondering, what is the importance of it? Perhaps, I do not grasp the concept quite right.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|InnerForge10]]</p>
+<p>2. [[_reply2|InnerForge10][$annatarAffection = $annatarAffection + 5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Intro [Eregion] {"position":"1225,500","size":"100,100"}
-\:: Intro
-Мирдания: Ах, еще один день в самом благословенном из королевств Арды! Как же замечательно трудиться в здешних кузницах на благо нашего народа!
+<<nobr>>
 
- [[Направиться в кузницу|Forge1]]
+<<set _npcPic to "MIR0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ах, еще один день в самом благословенном из королевств Арды! Как же замечательно трудиться в здешних кузницах на благо нашего народа!">>
+<<set _reply1 to "Направиться в кузницу">>
+<<case "en">>
+<<set _npcReply to "Ah, another day in Arda’s most blessed kingdom! It is so delightful to work in the forges of Eregion for our people to prosper!">>
+<<set _reply1 to "To the smithy">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Forge1]]</div>
+<</nobr>>
 
 
-:: Untitled Passage {"position":"1075,500","size":"100,100"}
-\:: Start
-Добро пожаловать в КУЗНИЦУ ЛЮБВИ!
+:: Start {"position":"1075,500","size":"100,100"}
+<<nobr>><div id="textbox">
+<p>[[Начать|Intro][$lang to "ru"]]</p>
+<p>[[Start|Intro][$lang to "en"]]</p>
+</div><</nobr>>
 
+
+:: StoryInit {"position":"1075,675","size":"100,100"}
 <<set $annatarAffection to 0>>
 <<set $celAffection to 0>>
 <<set $galAffection to 0>>
 <<set $igorAffection to 0>>
 
-<<button "Начать">>
-    <<goto "Intro">>
-<</button>>
+<<set $lang to "ru">>
+
+<<set $winner to "">>
 
 
 :: Wall1 [Wall] {"position":"2375,500","size":"100,100"}
-[СТЕНА на какой-то из башен Эрегиона, разблюренный пейзажик вдали, день]
+<<nobr>>
 
-Мирдания: Сегодня мы неплохо потрудились. Можно немного подышать свежим Эрегионским воздухом.
-[[Вдохнуть полной грудью|Wall2]]
+<<set _npcPic to "MIRB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Сегодня мы неплохо потрудились. Можно немного подышать свежим Эрегионским воздухом.">>
+<<set _reply1 to "Вдохнуть полной грудью">>
+<<case "en">>
+<<set _npcReply to "We have done a fine job today. Now I can get some fresh Eregion air.">>
+<<set _reply1 to "Breathe freely">>
+<</switch>>
 
-
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Wall2]]</div>
+<</nobr>>
 
 
 :: Wall2 [Wall igor] {"position":"2375,625","size":"100,100"}
-Малендол: Здравствуй снова, прекрасная Мирдания! Много работы в кузнице, да?
+<<nobr>>
 
-Мирдания: 
+<<set _npcPic to "IgorA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Здравствуй снова, прекрасная Мирдания! Много работы в кузнице, да?">>
+<<set _reply1 to "Малендол, это ты! Патрулируешь наше королевство?">>
+<<set _reply2 to "A, Малендол. Знаешь, несмотря на то, что ты в Эрегионе не так давно, я рада, что ты охраняешь его границы.">>
+<<case "en">>
+<<set _npcReply to "It is good to see you again, fair Mirdania! I guess you have been very busy in the forge?">>
+<<set _reply1 to "Malendol, it’s you again! Patrolling the kingdom, aren’t you?">>
+<<set _reply2 to "I have indeed, Malendol. You know, despite the fact that you arrived at Eregion not so long ago, I am glad that you are guarding our borders.">>
+<</switch>>
 
-[[- Малендол, это ты! Патрулируешь наше королевство?|Wall3]]
-[[- A, Малендол. Знаешь, несмотря на то, что ты в Эрегионе не так давно, я рада, что ты охраняешь его границы.|Wall3][$igorAffection = $igorAffection + 10]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall3]]</p>
+<p>2. [[_reply2|Wall3][$igorAffection = $igorAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall3 [Wall igor] {"position":"2375,750","size":"100,100"}
+<<nobr>>
 
-Малендол: О, да, я просто делаю свою работу, госпожа. Мимо меня никакой враг не проскочит!
+<<set _npcPic to "Igor0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "О, да, я просто делаю свою работу, госпожа. Мимо меня никакой враг не проскочит!">>
+<<set _reply1 to "Спасибо, Малендол! Благодаря тебе тайны Эрегиона не окажутся не в тех руках.">>
+<<set _reply2 to "Хорошо бы. Мы занимаемся невероятно важными разработками в кузнице, так что твой вклад тоже весьма существенен.">>
+<<case "en">>
+<<set _npcReply to "I am simply doing my job, my lady. No enemy will go past me!">>
+<<set _reply1 to "Thank you, Madendol. Your work keeps the secrets of Eregion from ending up in the wrong hands.">>
+<<set _reply2 to "I hope they won’t. We do an immensely important job in this forge, so your contribution is also rather significant.">>
+<</switch>>
 
-Мирдания: 
-[[- Спасибо, Малендол! Благодаря тебе тайны Эрегиона не окажутся не в тех руках.|Wall4][$igorAffection = $igorAffection + 20]]
-[[- Хорошо бы. Мы занимаемся невероятно важными разработками в кузнице, так что твой вклад тоже весьма существенен.|Wall4]]
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall4][$igorAffection = $igorAffection + 20]]</p>
+<p>2. [[_reply2|Wall4]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall4 [Wall igor] {"position":"2375,875","size":"100,100"}
-Малендол: Ах, Мирдания! Как же приятно слышать, что ты ценишь меня! Ты ведь не только услада для глаз, но и умнейшая из подмастерий владыки Келебримбора!
+<<nobr>>
 
-Мирдания: 
-[[- Нам нужно возвращаться к работе, Малендол. Я не шутила про важные разработки.|Wall5]]
-[[- Спасибо, Малендол! Еще увидимся. |Wall5][$igorAffection = $igorAffection + 10]]
+<<set _npcPic to "IgorB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ах, Мирдания! Как же приятно слышать, что ты ценишь меня! Ты ведь не только услада для глаз, но и умнейшая из подмастерий владыки Келебримбора!">>
+<<set _reply1 to "Нам нужно возвращаться к работе, Малендол. Я не шутила про важные разработки.">>
+<<set _reply2 to "Спасибо, Малендол! Еще увидимся.">>
+<<case "en">>
+<<set _npcReply to "Oh, Mirdania! I am so happy to hear that you value me! You are more than a feast for the eyes, you are the cleverest of Lord Celebrimbor’s apprentices!">>
+<<set _reply1 to "We should both return to work, Malendol. I was not joking when I said it was important.">>
+<<set _reply2 to "Thank you, Malendol. See you soon.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall5]]</p>
+<p>2. [[_reply2|Wall5][$igorAffection = $igorAffection + 10]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall5 [Wall] {"position":"2500,500","size":"100,100"}
-Мирдания: Как будто Малендол не кажется мне подозрительным. Но слова владыки Келебримбора о том, что он появился здесь недавно и неизвестно, откуда прибыл, не идут у меня из головы…
-[[Задумчиво пройтись|Wall6]]
+<<nobr>>
 
+<<set _npcPic to "MIRB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Как будто Малендол не кажется мне подозрительным. Но слова владыки Келебримбора о том, что он появился здесь недавно и неизвестно, откуда прибыл, не идут у меня из головы…">>
+<<set _reply1 to "Задумчиво пройтись">>
+<<case "en">>
+<<set _npcReply to "Madendol does not appear suspicious to me. However, I cannot stop thinking of Lord Celebrimbor’s words about Madendol’s recent arrival out of nowhere. ">>
+<<set _reply1 to "Stroll musingly">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><p>_npcReply</p>
+[[_reply1|Wall6]]</div>
+<</nobr>>
 
 
 :: Wall6 [Wall annatar] {"position":"2500,625","size":"100,100"}
-Аннатар: Вышла подышать, Мирдания? Я тоже.
+<<nobr>>
 
-Мирдания: 
-[[- Аннатар, я должна поделиться с тобой своими тревогами. Ходят слухи, что в Эрегионе сейчас находится тот, кто не должен здесь быть…|Wall7][$abnnatarAffection = $annatarAffection  + 5]]
-[[- Все в порядке, я не выбиваюсь из графика. Просто перекинулась парой слов со стражником. Излишняя бдительность в нашей работе не повредит.|Wall7]]
+<<set _npcPic to "ANNA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Вышла подышать, Мирдания? Я тоже.">>
+<<set _reply1 to "Аннатар, я должна поделиться с тобой своими тревогами. Ходят слухи, что в Эрегионе сейчас находится тот, кто не должен здесь быть…">>
+<<set _reply2 to "Все в порядке, я не выбиваюсь из графика. Просто перекинулась парой слов со стражником. Излишняя бдительность в нашей работе не повредит.">>
+<<case "en">>
+<<set _npcReply to "Are you out for some fresh air, Mirdania? Me too.">>
+<<set _reply1 to "Annatar, I need to share my concerns with you. I have heard the rumour that there is someone in Eregion who must not be here.">>
+<<set _reply2 to "Everything is fine, I am on schedule. I simply exchanged a few words with a guard. A bit of vigilance will do no harm.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall7][$abnnatarAffection = $annatarAffection  + 5]]</p>
+<p>2. [[_reply2|Wall7]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall7 [Wall annatar] {"position":"2500,750","size":"100,100"}
-Аннатар: Ты же… Ни в чем меня не подозреваешь, правда?
+<<nobr>>
 
-Мирдания: 
-[[- Конечно нет, ты же ниспослан самими Валар!|Wall8]]
-[[- Знаешь, в таком деле, как наше, подозревать нужно всех.|Wall8][$annatarAffection = $annatarAffection+5]]
+<<set _npcPic to "ANNA.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ты же… Ни в чем меня не подозреваешь, правда?">>
+<<set _reply1 to "Конечно нет, ты же ниспослан самими Валар!">>
+<<set _reply2 to "Знаешь, в таком деле, как наше, подозревать нужно всех.">>
+<<case "en">>
+<<set _npcReply to "You aren’t suspecting me of anything, are you?">>
+<<set _reply1 to "Of course not, you are Valar-sent!">>
+<<set _reply2 to "You know, in a matter so meaningful as ours, one has to be suspicious of everyone.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall8]]</p>
+<p>2. [[_reply2|Wall8][$annatarAffection = $annatarAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall8 [Wall annatar] {"position":"2500,875","size":"100,100"}
-Аннатар: Все так, все так… Ах, Мирдания, твои волосы так красиво блестят в свете солнца! 
+<<nobr>>
 
-Мирдания: 
-[[- Спасибо, Аннатар!|Wall9]]
-[[- У тебя тоже прическа красивая.|Wall9][$annatarAffection = $annatarAffection+5]]
+<<set _npcPic to "ANN0.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Все так, все так… Ах, Мирдания, твои волосы так красиво блестят в свете солнца! 
+">>
+<<set _reply1 to "Спасибо, Аннатар!">>
+<<set _reply2 to "У тебя тоже прическа красивая.">>
+<<case "en">>
+<<set _npcReply to "Indeed, indeed. Mirdania, your hair is shining so beautifully in the sunlight!">>
+<<set _reply1 to "Thank you, Annatar!">>
+<<set _reply2 to "Your hairstyle is pretty, too.">>
+<</switch>>
+
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|Wall9]]</p>
+<p>2. [[_reply2|Wall9][$annatarAffection = $annatarAffection+5]]</p>
+</div>
+</div>
+<</nobr>>
 
 
 :: Wall9 [Wall annatar] {"position":"2500,1000","size":"100,100"}
-Аннатар: Ладненько, пора за работу. Жизнь в Нуменоре меня научила, что зарплата сама себя не заработает. То есть, в Валиноре, конечно же в Валиноре. 
+<<nobr>>
 
-Мирдания: 
-[[- Конечно, я немного полюбуюсь Эрегионом и тоже вернусь в кузницу.|EveWall1][$annatarAffection = $annatarAffection+5]]
-[[- Да, я скоро вернусь. Доделывай пока прототип доспеха для государя Гил-Галада, а то владыка будет нервничать.|EveWall1]]
+<<set _npcPic to "ANNB.png">>
+<<switch $lang>>
+<<case "ru">>
+<<set _npcReply to "Ладненько, пора за работу. Жизнь в Нуменоре меня научила, что зарплата сама себя не заработает. То есть, в Валиноре, конечно же в Валиноре.">>
+<<set _reply1 to "Конечно, я немного полюбуюсь Эрегионом и тоже вернусь в кузницу.">>
+<<set _reply2 to "Да, я скоро вернусь. Доделывай пока прототип доспеха для государя Гил-Галада, а то владыка будет нервничать.">>
+<<case "en">>
+<<set _npcReply to "Well, it’s time to work. I learnt in Númenor that no money will earn itself. In Valinor, I meant to say in Valinor.">>
+<<set _reply1 to "I intend to enjoy the view of Eregion a little and then I shall return to the forge as well.">>
+<<set _reply2 to "I shall return soon. In the meanwhile you can finish the armour prototype, so that our Lord is not unsettled.">>
+<</switch>>
 
+<div class="char">[img[_npcPic]]</div>
+<div class="chat"><div class="npc-reply"><p class="npc">_npcReply</p></div>
+<div class="reply"><img src="MIRPIC.png"/><p>1. [[_reply1|EveWall1][$annatarAffection = $annatarAffection+5]]</p>
+<p>2. [[_reply2|EveWall1]]</p>
+</div>
+</div>
+<</nobr>>
+
+
+:: StoryStylesheet [stylesheet]
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url('main.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  
+  aspect-ratio: 3 / 4;
+  max-width: 600px;
+  max-height: 1200px;
+  
+}
+
+body.eregion { 
+  background-image: url('eregion.jpg');
+}
+
+body.outerforge { 
+  background-image: url('outerforge.jpg');
+}
+
+body.innerforge { 
+  background-image: url('innerforge.jpg');
+}
+
+body.wall { 
+  background-image: url('wall.jpg');
+}
+
+body.evewall { 
+  background-image: url('evewall.jpg');
+}
+
+body.fin { 
+  background-image: url('fin.jpg');
+}
+
+#story {
+  margin: 0 0 0 2em !important;
+  display: flex;
+  flex-direction: column;
+}
+
+#passages {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 1200px;
+}
+
+.passage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#passage-start {
+  position: sticky;
+  padding: 0.3em;
+}
+
+#textbox {
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #99333C;
+}
+
+#textbox .link-internal {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #ffea85;
+}
+
+.char {
+  margin-bottom: -1em;
+  z-index: -10;
+}
+
+.char img {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  max-height: 1000px;
+  z-index: -5;
+  object-fit: contain;
+  width: 80%;
+  float: right;
+}
+
+.chat {
+  background-color: #e3d5c1;
+  padding: 0.3em;
+  padding-left: 2.5em;
+  position: absolute;
+  bottom: 0px;
+  min-height: 200px;
+  
+  
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.npc-reply { 
+  overflow-y: auto;
+}
+
+.reply { 
+  overflow-y: auto;
+}
+
+.chat img {
+  border: 5px solid #d68e31;
+  background-color: #593c1f;
+  float: left;
+  width: 100px;      /* Adjust size as needed */
+  height: auto;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat p {
+  color: #130C02;
+  margin: 2px;
+  line-height: normal;
+}
+
+.chat p.npc {
+  color: #130C02;
+  margin: 4px;
+  line-height: normal;
+  margin-bottom: 1em;
+}
+
+.link-internal {
+  color: #b76e2a
+}
